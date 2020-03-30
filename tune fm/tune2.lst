@@ -1,0 +1,2637 @@
+
+tune2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000110  00800100  00000ee0  00000f74  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000ee0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000101  00800210  00800210  00001084  2**0
+                  ALLOC
+  3 .stab         00002c1c  00000000  00000000  00001084  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00001637  00000000  00000000  00003ca0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .comment      00000011  00000000  00000000  000052d7  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000052e8  2**2
+                  CONTENTS, READONLY
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 97 00 	jmp	0x12e	; 0x12e <__ctors_end>
+   4:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+   8:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+   c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  10:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  14:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  18:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  1c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  20:	0c 94 b8 00 	jmp	0x170	; 0x170 <__vector_8>
+  24:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  28:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  2c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  30:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  34:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  38:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  3c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  40:	0c 94 48 01 	jmp	0x290	; 0x290 <__vector_16>
+  44:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  48:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  4c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  50:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  54:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  58:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  5c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  60:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  64:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  68:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  6c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  70:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  74:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  78:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  7c:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  80:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  84:	0c 94 85 02 	jmp	0x50a	; 0x50a <__vector_33>
+  88:	0c 94 b6 00 	jmp	0x16c	; 0x16c <__bad_interrupt>
+  8c:	c6 02       	muls	r28, r22
+  8e:	9d 02       	muls	r25, r29
+  90:	9d 02       	muls	r25, r29
+  92:	9d 02       	muls	r25, r29
+  94:	9d 02       	muls	r25, r29
+  96:	9d 02       	muls	r25, r29
+  98:	9d 02       	muls	r25, r29
+  9a:	9d 02       	muls	r25, r29
+  9c:	c6 02       	muls	r28, r22
+  9e:	9d 02       	muls	r25, r29
+  a0:	9d 02       	muls	r25, r29
+  a2:	9d 02       	muls	r25, r29
+  a4:	9d 02       	muls	r25, r29
+  a6:	9d 02       	muls	r25, r29
+  a8:	9d 02       	muls	r25, r29
+  aa:	9d 02       	muls	r25, r29
+  ac:	d0 02       	muls	r29, r16
+  ae:	9d 02       	muls	r25, r29
+  b0:	9d 02       	muls	r25, r29
+  b2:	9d 02       	muls	r25, r29
+  b4:	9d 02       	muls	r25, r29
+  b6:	9d 02       	muls	r25, r29
+  b8:	9d 02       	muls	r25, r29
+  ba:	9d 02       	muls	r25, r29
+  bc:	9d 02       	muls	r25, r29
+  be:	9d 02       	muls	r25, r29
+  c0:	9d 02       	muls	r25, r29
+  c2:	9d 02       	muls	r25, r29
+  c4:	9d 02       	muls	r25, r29
+  c6:	9d 02       	muls	r25, r29
+  c8:	9d 02       	muls	r25, r29
+  ca:	9d 02       	muls	r25, r29
+  cc:	d0 02       	muls	r29, r16
+  ce:	9d 02       	muls	r25, r29
+  d0:	9d 02       	muls	r25, r29
+  d2:	9d 02       	muls	r25, r29
+  d4:	9d 02       	muls	r25, r29
+  d6:	9d 02       	muls	r25, r29
+  d8:	9d 02       	muls	r25, r29
+  da:	9d 02       	muls	r25, r29
+  dc:	9d 02       	muls	r25, r29
+  de:	9d 02       	muls	r25, r29
+  e0:	9d 02       	muls	r25, r29
+  e2:	9d 02       	muls	r25, r29
+  e4:	9d 02       	muls	r25, r29
+  e6:	9d 02       	muls	r25, r29
+  e8:	9d 02       	muls	r25, r29
+  ea:	9d 02       	muls	r25, r29
+  ec:	e7 02       	muls	r30, r23
+  ee:	9d 02       	muls	r25, r29
+  f0:	9d 02       	muls	r25, r29
+  f2:	9d 02       	muls	r25, r29
+  f4:	9d 02       	muls	r25, r29
+  f6:	9d 02       	muls	r25, r29
+  f8:	9d 02       	muls	r25, r29
+  fa:	9d 02       	muls	r25, r29
+  fc:	eb 02       	muls	r30, r27
+  fe:	9d 02       	muls	r25, r29
+ 100:	9d 02       	muls	r25, r29
+ 102:	9d 02       	muls	r25, r29
+ 104:	9d 02       	muls	r25, r29
+ 106:	9d 02       	muls	r25, r29
+ 108:	9d 02       	muls	r25, r29
+ 10a:	9d 02       	muls	r25, r29
+ 10c:	9d 02       	muls	r25, r29
+ 10e:	9d 02       	muls	r25, r29
+ 110:	9d 02       	muls	r25, r29
+ 112:	9d 02       	muls	r25, r29
+ 114:	9d 02       	muls	r25, r29
+ 116:	9d 02       	muls	r25, r29
+ 118:	9d 02       	muls	r25, r29
+ 11a:	9d 02       	muls	r25, r29
+ 11c:	f9 02       	muls	r31, r25
+ 11e:	9d 02       	muls	r25, r29
+ 120:	9d 02       	muls	r25, r29
+ 122:	9d 02       	muls	r25, r29
+ 124:	9d 02       	muls	r25, r29
+ 126:	9d 02       	muls	r25, r29
+ 128:	9d 02       	muls	r25, r29
+ 12a:	9d 02       	muls	r25, r29
+ 12c:	b7 02       	muls	r27, r23
+
+0000012e <__ctors_end>:
+ 12e:	11 24       	eor	r1, r1
+ 130:	1f be       	out	0x3f, r1	; 63
+ 132:	cf ef       	ldi	r28, 0xFF	; 255
+ 134:	d0 e1       	ldi	r29, 0x10	; 16
+ 136:	de bf       	out	0x3e, r29	; 62
+ 138:	cd bf       	out	0x3d, r28	; 61
+
+0000013a <__do_copy_data>:
+ 13a:	12 e0       	ldi	r17, 0x02	; 2
+ 13c:	a0 e0       	ldi	r26, 0x00	; 0
+ 13e:	b1 e0       	ldi	r27, 0x01	; 1
+ 140:	e0 ee       	ldi	r30, 0xE0	; 224
+ 142:	fe e0       	ldi	r31, 0x0E	; 14
+ 144:	00 e0       	ldi	r16, 0x00	; 0
+ 146:	0b bf       	out	0x3b, r16	; 59
+ 148:	02 c0       	rjmp	.+4      	; 0x14e <__do_copy_data+0x14>
+ 14a:	07 90       	elpm	r0, Z+
+ 14c:	0d 92       	st	X+, r0
+ 14e:	a0 31       	cpi	r26, 0x10	; 16
+ 150:	b1 07       	cpc	r27, r17
+ 152:	d9 f7       	brne	.-10     	; 0x14a <__do_copy_data+0x10>
+
+00000154 <__do_clear_bss>:
+ 154:	23 e0       	ldi	r18, 0x03	; 3
+ 156:	a0 e1       	ldi	r26, 0x10	; 16
+ 158:	b2 e0       	ldi	r27, 0x02	; 2
+ 15a:	01 c0       	rjmp	.+2      	; 0x15e <.do_clear_bss_start>
+
+0000015c <.do_clear_bss_loop>:
+ 15c:	1d 92       	st	X+, r1
+
+0000015e <.do_clear_bss_start>:
+ 15e:	a1 31       	cpi	r26, 0x11	; 17
+ 160:	b2 07       	cpc	r27, r18
+ 162:	e1 f7       	brne	.-8      	; 0x15c <.do_clear_bss_loop>
+ 164:	0e 94 62 06 	call	0xcc4	; 0xcc4 <main>
+ 168:	0c 94 6e 07 	jmp	0xedc	; 0xedc <_exit>
+
+0000016c <__bad_interrupt>:
+ 16c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000170 <__vector_8>:
+ uint8_t state = 0;
+ uint8_t counter_value=0; //variable for storing pushbutton state
+ int16_t total = 0;
+ uint8_t data = 0x00;
+
+ISR(INT7_vect){STC_interrupt = TRUE;}
+ 170:	1f 92       	push	r1
+ 172:	0f 92       	push	r0
+ 174:	0f b6       	in	r0, 0x3f	; 63
+ 176:	0f 92       	push	r0
+ 178:	11 24       	eor	r1, r1
+ 17a:	8f 93       	push	r24
+ 17c:	81 e0       	ldi	r24, 0x01	; 1
+ 17e:	80 93 b1 02 	sts	0x02B1, r24
+ 182:	8f 91       	pop	r24
+ 184:	0f 90       	pop	r0
+ 186:	0f be       	out	0x3f, r0	; 63
+ 188:	0f 90       	pop	r0
+ 18a:	1f 90       	pop	r1
+ 18c:	18 95       	reti
+
+0000018e <chk_buttons>:
+
+//********************************************************************
+                       //debouncing of  push button
+//********************************************************************
+uint8_t chk_buttons(uint8_t button) {
+ 18e:	48 2f       	mov	r20, r24
+
+  static uint16_t state[8] ={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; //holds present state
+  state[button] = (state[button] << 1) | (! bit_is_clear(PINA, button)) | 0xE000;
+ 190:	e8 2f       	mov	r30, r24
+ 192:	f0 e0       	ldi	r31, 0x00	; 0
+ 194:	99 b3       	in	r25, 0x19	; 25
+ 196:	ee 0f       	add	r30, r30
+ 198:	ff 1f       	adc	r31, r31
+ 19a:	e7 5e       	subi	r30, 0xE7	; 231
+ 19c:	fd 4f       	sbci	r31, 0xFD	; 253
+ 19e:	20 81       	ld	r18, Z
+ 1a0:	31 81       	ldd	r19, Z+1	; 0x01
+ 1a2:	22 0f       	add	r18, r18
+ 1a4:	33 1f       	adc	r19, r19
+ 1a6:	30 6e       	ori	r19, 0xE0	; 224
+ 1a8:	89 2f       	mov	r24, r25
+ 1aa:	90 e0       	ldi	r25, 0x00	; 0
+ 1ac:	02 c0       	rjmp	.+4      	; 0x1b2 <chk_buttons+0x24>
+ 1ae:	95 95       	asr	r25
+ 1b0:	87 95       	ror	r24
+ 1b2:	4a 95       	dec	r20
+ 1b4:	e2 f7       	brpl	.-8      	; 0x1ae <chk_buttons+0x20>
+ 1b6:	81 70       	andi	r24, 0x01	; 1
+ 1b8:	99 27       	eor	r25, r25
+ 1ba:	28 2b       	or	r18, r24
+ 1bc:	39 2b       	or	r19, r25
+ 1be:	31 83       	std	Z+1, r19	; 0x01
+ 1c0:	20 83       	st	Z, r18
+  if (state[button] == 0xF000) return 1;
+ 1c2:	81 e0       	ldi	r24, 0x01	; 1
+ 1c4:	21 15       	cp	r18, r1
+ 1c6:	30 4f       	sbci	r19, 0xF0	; 240
+ 1c8:	09 f0       	breq	.+2      	; 0x1cc <chk_buttons+0x3e>
+ 1ca:	80 e0       	ldi	r24, 0x00	; 0
+  return 0;
+
+}
+ 1cc:	08 95       	ret
+
+000001ce <bargraph>:
+//********************************************************************
+                              //bargraph
+//*********************************************************************
+
+ void bargraph(){
+  PORTB |= 0x01; //rising edge to rgclk
+ 1ce:	c0 9a       	sbi	0x18, 0	; 24
+  PORTB &= ~0x01;//falling edge to rgclk
+ 1d0:	c0 98       	cbi	0x18, 0	; 24
+ 1d2:	08 95       	ret
+
+000001d4 <encoder>:
+void encoder(){
+
+ static uint8_t a_past = 0x00; // holds last value
+ static uint8_t b_past = 0x00; // holds last value for 
+
+ DDRE = 0xFF;             //set port E to output
+ 1d4:	8f ef       	ldi	r24, 0xFF	; 255
+ 1d6:	82 b9       	out	0x02, r24	; 2
+ PORTE |= 0x20 ;          // inhibitor high
+ 1d8:	1d 9a       	sbi	0x03, 5	; 3
+ asm("nop");
+ 1da:	00 00       	nop
+ asm("nop");
+ 1dc:	00 00       	nop
+ PORTE &= ~(0x40);        //SH_LD/ low
+ 1de:	1e 98       	cbi	0x03, 6	; 3
+ asm("nop");
+ 1e0:	00 00       	nop
+ asm("nop");
+ 1e2:	00 00       	nop
+ PORTE |= 0x40;           //SH/LD_n high
+ 1e4:	1e 9a       	sbi	0x03, 6	; 3
+ PORTE &= ~(0x20);        //inhibitor low
+ 1e6:	1d 98       	cbi	0x03, 5	; 3
+uint8_t dat = data&0x03;  // mask data
+ 1e8:	80 91 10 02 	lds	r24, 0x0210
+ 1ec:	28 2f       	mov	r18, r24
+ 1ee:	23 70       	andi	r18, 0x03	; 3
+uint8_t dat1 = data&0x0C; // mask data1
+ 1f0:	8c 70       	andi	r24, 0x0C	; 12
+
+
+	switch(a_past)  // inc & dec according to direction of encoder for encoder 1
+ 1f2:	90 91 18 02 	lds	r25, 0x0218
+ 1f6:	91 30       	cpi	r25, 0x01	; 1
+ 1f8:	b1 f0       	breq	.+44     	; 0x226 <encoder+0x52>
+ 1fa:	20 f0       	brcs	.+8      	; 0x204 <encoder+0x30>
+ 1fc:	92 30       	cpi	r25, 0x02	; 2
+ 1fe:	11 f0       	breq	.+4      	; 0x204 <encoder+0x30>
+ 200:	93 30       	cpi	r25, 0x03	; 3
+ 202:	11 f4       	brne	.+4      	; 0x208 <encoder+0x34>
+		}
+        case 0x02:
+		{
+			if(dat==0x00){}
+                  	else if(dat==0x03){}
+			a_past = dat;
+ 204:	20 93 18 02 	sts	0x0218, r18
+	
+    }
+
+
+
+switch(b_past)  //inc dec count according to direction of encoder for second encoder
+ 208:	90 91 17 02 	lds	r25, 0x0217
+ 20c:	94 30       	cpi	r25, 0x04	; 4
+ 20e:	d1 f0       	breq	.+52     	; 0x244 <encoder+0x70>
+ 210:	38 f0       	brcs	.+14     	; 0x220 <encoder+0x4c>
+ 212:	98 30       	cpi	r25, 0x08	; 8
+ 214:	11 f0       	breq	.+4      	; 0x21a <encoder+0x46>
+ 216:	9c 30       	cpi	r25, 0x0C	; 12
+ 218:	21 f5       	brne	.+72     	; 0x262 <encoder+0x8e>
+                }
+        case 0x08:
+                {
+                        if(dat1==0x00){}
+                        else if(dat1==0x0C){}
+                        b_past = dat1;
+ 21a:	80 93 17 02 	sts	0x0217, r24
+ 21e:	08 95       	ret
+	
+    }
+
+
+
+switch(b_past)  //inc dec count according to direction of encoder for second encoder
+ 220:	99 23       	and	r25, r25
+ 222:	d9 f3       	breq	.-10     	; 0x21a <encoder+0x46>
+ 224:	08 95       	ret
+                  	break;
+		}
+
+        case 0x01:
+		{
+			if(dat==0x03){current_fm_freq = current_fm_freq + 20;}// inc count
+ 226:	23 30       	cpi	r18, 0x03	; 3
+ 228:	41 f1       	breq	.+80     	; 0x27a <encoder+0xa6>
+                  	else if(dat==0x00){current_fm_freq = current_fm_freq - 20;}// dec count
+ 22a:	21 11       	cpse	r18, r1
+ 22c:	eb cf       	rjmp	.-42     	; 0x204 <encoder+0x30>
+ 22e:	40 91 0b 01 	lds	r20, 0x010B
+ 232:	50 91 0c 01 	lds	r21, 0x010C
+ 236:	44 51       	subi	r20, 0x14	; 20
+ 238:	51 09       	sbc	r21, r1
+ 23a:	50 93 0c 01 	sts	0x010C, r21
+ 23e:	40 93 0b 01 	sts	0x010B, r20
+ 242:	e0 cf       	rjmp	.-64     	; 0x204 <encoder+0x30>
+                        break;
+                }
+
+        case 0x04:
+                {
+                        if(dat1==0x0C){total = total + 20;} // inc count
+ 244:	8c 30       	cpi	r24, 0x0C	; 12
+ 246:	71 f0       	breq	.+28     	; 0x264 <encoder+0x90>
+                        else if(dat1==0x00){total = total - 20;} // dec count
+ 248:	81 11       	cpse	r24, r1
+ 24a:	e7 cf       	rjmp	.-50     	; 0x21a <encoder+0x46>
+ 24c:	20 91 11 02 	lds	r18, 0x0211
+ 250:	30 91 12 02 	lds	r19, 0x0212
+ 254:	24 51       	subi	r18, 0x14	; 20
+ 256:	31 09       	sbc	r19, r1
+ 258:	30 93 12 02 	sts	0x0212, r19
+ 25c:	20 93 11 02 	sts	0x0211, r18
+ 260:	dc cf       	rjmp	.-72     	; 0x21a <encoder+0x46>
+ 262:	08 95       	ret
+                        break;
+                }
+
+        case 0x04:
+                {
+                        if(dat1==0x0C){total = total + 20;} // inc count
+ 264:	20 91 11 02 	lds	r18, 0x0211
+ 268:	30 91 12 02 	lds	r19, 0x0212
+ 26c:	2c 5e       	subi	r18, 0xEC	; 236
+ 26e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 270:	30 93 12 02 	sts	0x0212, r19
+ 274:	20 93 11 02 	sts	0x0211, r18
+ 278:	d0 cf       	rjmp	.-96     	; 0x21a <encoder+0x46>
+                  	break;
+		}
+
+        case 0x01:
+		{
+			if(dat==0x03){current_fm_freq = current_fm_freq + 20;}// inc count
+ 27a:	40 91 0b 01 	lds	r20, 0x010B
+ 27e:	50 91 0c 01 	lds	r21, 0x010C
+ 282:	4c 5e       	subi	r20, 0xEC	; 236
+ 284:	5f 4f       	sbci	r21, 0xFF	; 255
+ 286:	50 93 0c 01 	sts	0x010C, r21
+ 28a:	40 93 0b 01 	sts	0x010B, r20
+ 28e:	ba cf       	rjmp	.-140    	; 0x204 <encoder+0x30>
+
+00000290 <__vector_16>:
+}
+//********************************************************************
+                                 //ISR
+//*********************************************************************
+
+ISR(TIMER0_OVF_vect){      
+ 290:	1f 92       	push	r1
+ 292:	0f 92       	push	r0
+ 294:	0f b6       	in	r0, 0x3f	; 63
+ 296:	0f 92       	push	r0
+ 298:	11 24       	eor	r1, r1
+ 29a:	0b b6       	in	r0, 0x3b	; 59
+ 29c:	0f 92       	push	r0
+ 29e:	2f 93       	push	r18
+ 2a0:	3f 93       	push	r19
+ 2a2:	4f 93       	push	r20
+ 2a4:	5f 93       	push	r21
+ 2a6:	6f 93       	push	r22
+ 2a8:	7f 93       	push	r23
+ 2aa:	8f 93       	push	r24
+ 2ac:	9f 93       	push	r25
+ 2ae:	af 93       	push	r26
+ 2b0:	ef 93       	push	r30
+ 2b2:	ff 93       	push	r31
+   uint8_t i=1;
+   PORTB |= 0x70; // ENABLE TRISTATE BUFFER
+ 2b4:	88 b3       	in	r24, 0x18	; 24
+ 2b6:	80 67       	ori	r24, 0x70	; 112
+ 2b8:	88 bb       	out	0x18, r24	; 24
+  asm("nop");
+ 2ba:	00 00       	nop
+  asm("nop");
+ 2bc:	00 00       	nop
+ 2be:	60 91 14 02 	lds	r22, 0x0214
+ 2c2:	e9 e1       	ldi	r30, 0x19	; 25
+ 2c4:	f2 e0       	ldi	r31, 0x02	; 2
+ 2c6:	40 e0       	ldi	r20, 0x00	; 0
+ 2c8:	50 e0       	ldi	r21, 0x00	; 0
+  for (i=1;i<3;i++){  //counter for first two pushbuttons
+         chk_buttons(i-1);// call chk_cuttons
+         if(chk_buttons(i-1) == 1){  // if its pushed
+            state ^= i;}
+      if((state & 0x03) == 0) {counter_value = 1;} //if no button pressed
+ 2ca:	a1 e0       	ldi	r26, 0x01	; 1
+ 2cc:	71 e0       	ldi	r23, 0x01	; 1
+ 2ce:	74 0f       	add	r23, r20
+                       //debouncing of  push button
+//********************************************************************
+uint8_t chk_buttons(uint8_t button) {
+
+  static uint16_t state[8] ={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; //holds present state
+  state[button] = (state[button] << 1) | (! bit_is_clear(PINA, button)) | 0xE000;
+ 2d0:	99 b3       	in	r25, 0x19	; 25
+ 2d2:	20 81       	ld	r18, Z
+ 2d4:	31 81       	ldd	r19, Z+1	; 0x01
+ 2d6:	22 0f       	add	r18, r18
+ 2d8:	33 1f       	adc	r19, r19
+ 2da:	30 6e       	ori	r19, 0xE0	; 224
+ 2dc:	89 2f       	mov	r24, r25
+ 2de:	90 e0       	ldi	r25, 0x00	; 0
+ 2e0:	04 2e       	mov	r0, r20
+ 2e2:	02 c0       	rjmp	.+4      	; 0x2e8 <__vector_16+0x58>
+ 2e4:	95 95       	asr	r25
+ 2e6:	87 95       	ror	r24
+ 2e8:	0a 94       	dec	r0
+ 2ea:	e2 f7       	brpl	.-8      	; 0x2e4 <__vector_16+0x54>
+ 2ec:	81 70       	andi	r24, 0x01	; 1
+ 2ee:	99 27       	eor	r25, r25
+ 2f0:	28 2b       	or	r18, r24
+ 2f2:	39 2b       	or	r19, r25
+ 2f4:	31 83       	std	Z+1, r19	; 0x01
+ 2f6:	20 83       	st	Z, r18
+ 2f8:	89 b3       	in	r24, 0x19	; 25
+ 2fa:	90 e0       	ldi	r25, 0x00	; 0
+ 2fc:	04 2e       	mov	r0, r20
+ 2fe:	02 c0       	rjmp	.+4      	; 0x304 <__vector_16+0x74>
+ 300:	95 95       	asr	r25
+ 302:	87 95       	ror	r24
+ 304:	0a 94       	dec	r0
+ 306:	e2 f7       	brpl	.-8      	; 0x300 <__vector_16+0x70>
+ 308:	81 70       	andi	r24, 0x01	; 1
+ 30a:	99 27       	eor	r25, r25
+ 30c:	90 6e       	ori	r25, 0xE0	; 224
+ 30e:	22 0f       	add	r18, r18
+ 310:	33 1f       	adc	r19, r19
+ 312:	82 2b       	or	r24, r18
+ 314:	93 2b       	or	r25, r19
+ 316:	81 93       	st	Z+, r24
+ 318:	91 93       	st	Z+, r25
+  if (state[button] == 0xF000) return 1;
+ 31a:	81 15       	cp	r24, r1
+ 31c:	90 4f       	sbci	r25, 0xF0	; 240
+ 31e:	61 f1       	breq	.+88     	; 0x378 <__vector_16+0xe8>
+  asm("nop");
+  for (i=1;i<3;i++){  //counter for first two pushbuttons
+         chk_buttons(i-1);// call chk_cuttons
+         if(chk_buttons(i-1) == 1){  // if its pushed
+            state ^= i;}
+      if((state & 0x03) == 0) {counter_value = 1;} //if no button pressed
+ 320:	86 2f       	mov	r24, r22
+ 322:	83 70       	andi	r24, 0x03	; 3
+ 324:	21 f5       	brne	.+72     	; 0x36e <__vector_16+0xde>
+ 326:	a0 93 13 02 	sts	0x0213, r26
+ISR(TIMER0_OVF_vect){      
+   uint8_t i=1;
+   PORTB |= 0x70; // ENABLE TRISTATE BUFFER
+  asm("nop");
+  asm("nop");
+  for (i=1;i<3;i++){  //counter for first two pushbuttons
+ 32a:	41 30       	cpi	r20, 0x01	; 1
+ 32c:	51 05       	cpc	r21, r1
+ 32e:	e1 f4       	brne	.+56     	; 0x368 <__vector_16+0xd8>
+      if((state & 0x03) == 2) {} //if second button is pressed
+      if((state & 0x03) == 3) {counter_value = 0;} // if both the buttons are pressed
+            
+    
+  }
+    PORTB |= 0x00; //disable tristate buffer
+ 330:	88 b3       	in	r24, 0x18	; 24
+ 332:	88 bb       	out	0x18, r24	; 24
+    SPDR = state;// send data to bargraph
+ 334:	80 91 14 02 	lds	r24, 0x0214
+ 338:	8f b9       	out	0x0f, r24	; 15
+    while(bit_is_clear(SPSR,SPIF)){}// wait for 8 cycles
+ 33a:	77 9b       	sbis	0x0e, 7	; 14
+ 33c:	fe cf       	rjmp	.-4      	; 0x33a <__vector_16+0xaa>
+    data = SPDR; // move spdr value to variable
+ 33e:	8f b1       	in	r24, 0x0f	; 15
+ 340:	80 93 10 02 	sts	0x0210, r24
+//	encoder();                            //call encoder
+//	bargraph();                           //call bargraph
+}
+ 344:	ff 91       	pop	r31
+ 346:	ef 91       	pop	r30
+ 348:	af 91       	pop	r26
+ 34a:	9f 91       	pop	r25
+ 34c:	8f 91       	pop	r24
+ 34e:	7f 91       	pop	r23
+ 350:	6f 91       	pop	r22
+ 352:	5f 91       	pop	r21
+ 354:	4f 91       	pop	r20
+ 356:	3f 91       	pop	r19
+ 358:	2f 91       	pop	r18
+ 35a:	0f 90       	pop	r0
+ 35c:	0b be       	out	0x3b, r0	; 59
+ 35e:	0f 90       	pop	r0
+ 360:	0f be       	out	0x3f, r0	; 63
+ 362:	0f 90       	pop	r0
+ 364:	1f 90       	pop	r1
+ 366:	18 95       	reti
+ 368:	41 e0       	ldi	r20, 0x01	; 1
+ 36a:	50 e0       	ldi	r21, 0x00	; 0
+ 36c:	af cf       	rjmp	.-162    	; 0x2cc <__vector_16+0x3c>
+         if(chk_buttons(i-1) == 1){  // if its pushed
+            state ^= i;}
+      if((state & 0x03) == 0) {counter_value = 1;} //if no button pressed
+      if((state & 0x03) == 1) {} //if first button is pressed
+      if((state & 0x03) == 2) {} //if second button is pressed
+      if((state & 0x03) == 3) {counter_value = 0;} // if both the buttons are pressed
+ 36e:	83 30       	cpi	r24, 0x03	; 3
+ 370:	e1 f6       	brne	.-72     	; 0x32a <__vector_16+0x9a>
+ 372:	10 92 13 02 	sts	0x0213, r1
+ 376:	d9 cf       	rjmp	.-78     	; 0x32a <__vector_16+0x9a>
+  asm("nop");
+  asm("nop");
+  for (i=1;i<3;i++){  //counter for first two pushbuttons
+         chk_buttons(i-1);// call chk_cuttons
+         if(chk_buttons(i-1) == 1){  // if its pushed
+            state ^= i;}
+ 378:	67 27       	eor	r22, r23
+ 37a:	60 93 14 02 	sts	0x0214, r22
+ 37e:	d0 cf       	rjmp	.-96     	; 0x320 <__vector_16+0x90>
+
+00000380 <spi_init>:
+//*********************************************************************
+                                //SPI initialize
+//*********************************************************************
+void spi_init()
+{
+	DDRB = 0xF7;// set ss_n, sck, mosi
+ 380:	87 ef       	ldi	r24, 0xF7	; 247
+ 382:	87 bb       	out	0x17, r24	; 23
+	SPCR |= (1<<SPE) | (1<<MSTR);// master mode
+ 384:	8d b1       	in	r24, 0x0d	; 13
+ 386:	80 65       	ori	r24, 0x50	; 80
+ 388:	8d b9       	out	0x0d, r24	; 13
+	SPSR |= (1<<SPI2X);// double speed operation
+ 38a:	70 9a       	sbi	0x0e, 0	; 14
+ 38c:	08 95       	ret
+
+0000038e <segsum>:
+
+uint8_t segment_data[5];// holds data to be sent
+
+uint8_t dec_to_7seg[11] = {0x03,0x9F,0x25,0x0D,0x99,0x49,0x41,0x1F,0x01,0x09,0xFF};// decimal to 7-segment LED display encoding 
+
+void segsum(uint16_t sum) {
+ 38e:	cf 93       	push	r28
+ 390:	df 93       	push	r29
+ 392:	ec 01       	movw	r28, r24
+uint8_t ones;  
+uint8_t tens;  
+uint8_t hundreds;  
+uint8_t thousands;                         //determine how many digits there are 
+ones = sum%10;
+ 394:	9c 01       	movw	r18, r24
+ 396:	ad ec       	ldi	r26, 0xCD	; 205
+ 398:	bc ec       	ldi	r27, 0xCC	; 204
+ 39a:	0e 94 fa 06 	call	0xdf4	; 0xdf4 <__umulhisi3>
+ 39e:	ac 01       	movw	r20, r24
+ 3a0:	56 95       	lsr	r21
+ 3a2:	47 95       	ror	r20
+ 3a4:	56 95       	lsr	r21
+ 3a6:	47 95       	ror	r20
+ 3a8:	56 95       	lsr	r21
+ 3aa:	47 95       	ror	r20
+ 3ac:	9a 01       	movw	r18, r20
+ 3ae:	22 0f       	add	r18, r18
+ 3b0:	33 1f       	adc	r19, r19
+ 3b2:	ca 01       	movw	r24, r20
+ 3b4:	88 0f       	add	r24, r24
+ 3b6:	99 1f       	adc	r25, r25
+ 3b8:	88 0f       	add	r24, r24
+ 3ba:	99 1f       	adc	r25, r25
+ 3bc:	88 0f       	add	r24, r24
+ 3be:	99 1f       	adc	r25, r25
+ 3c0:	82 0f       	add	r24, r18
+ 3c2:	93 1f       	adc	r25, r19
+ 3c4:	fe 01       	movw	r30, r28
+ 3c6:	e8 1b       	sub	r30, r24
+ 3c8:	f9 0b       	sbc	r31, r25
+tens = (sum/10)%10;
+hundreds = (sum/100)%10;
+thousands = (sum/1000)%10;
+segment_data[0] = dec_to_7seg[ones];
+ 3ca:	e0 50       	subi	r30, 0x00	; 0
+ 3cc:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3ce:	80 81       	ld	r24, Z
+ 3d0:	80 93 86 02 	sts	0x0286, r24
+uint8_t ones;  
+uint8_t tens;  
+uint8_t hundreds;  
+uint8_t thousands;                         //determine how many digits there are 
+ones = sum%10;
+tens = (sum/10)%10;
+ 3d4:	9a 01       	movw	r18, r20
+ 3d6:	0e 94 fa 06 	call	0xdf4	; 0xdf4 <__umulhisi3>
+ 3da:	96 95       	lsr	r25
+ 3dc:	87 95       	ror	r24
+ 3de:	96 95       	lsr	r25
+ 3e0:	87 95       	ror	r24
+ 3e2:	96 95       	lsr	r25
+ 3e4:	87 95       	ror	r24
+ 3e6:	9c 01       	movw	r18, r24
+ 3e8:	22 0f       	add	r18, r18
+ 3ea:	33 1f       	adc	r19, r19
+ 3ec:	88 0f       	add	r24, r24
+ 3ee:	99 1f       	adc	r25, r25
+ 3f0:	88 0f       	add	r24, r24
+ 3f2:	99 1f       	adc	r25, r25
+ 3f4:	88 0f       	add	r24, r24
+ 3f6:	99 1f       	adc	r25, r25
+ 3f8:	82 0f       	add	r24, r18
+ 3fa:	93 1f       	adc	r25, r19
+ 3fc:	48 1b       	sub	r20, r24
+ 3fe:	59 0b       	sbc	r21, r25
+hundreds = (sum/100)%10;
+thousands = (sum/1000)%10;
+segment_data[0] = dec_to_7seg[ones];
+segment_data[1] = dec_to_7seg[tens];
+ 400:	fa 01       	movw	r30, r20
+ 402:	e0 50       	subi	r30, 0x00	; 0
+ 404:	ff 4f       	sbci	r31, 0xFF	; 255
+ 406:	80 81       	ld	r24, Z
+ 408:	80 93 87 02 	sts	0x0287, r24
+segment_data[2] = dec_to_7seg[10];
+ 40c:	80 91 0a 01 	lds	r24, 0x010A
+ 410:	80 93 88 02 	sts	0x0288, r24
+uint8_t tens;  
+uint8_t hundreds;  
+uint8_t thousands;                         //determine how many digits there are 
+ones = sum%10;
+tens = (sum/10)%10;
+hundreds = (sum/100)%10;
+ 414:	9e 01       	movw	r18, r28
+ 416:	36 95       	lsr	r19
+ 418:	27 95       	ror	r18
+ 41a:	36 95       	lsr	r19
+ 41c:	27 95       	ror	r18
+ 41e:	ab e7       	ldi	r26, 0x7B	; 123
+ 420:	b4 e1       	ldi	r27, 0x14	; 20
+ 422:	0e 94 fa 06 	call	0xdf4	; 0xdf4 <__umulhisi3>
+ 426:	ac 01       	movw	r20, r24
+ 428:	56 95       	lsr	r21
+ 42a:	47 95       	ror	r20
+ 42c:	9a 01       	movw	r18, r20
+ 42e:	ad ec       	ldi	r26, 0xCD	; 205
+ 430:	bc ec       	ldi	r27, 0xCC	; 204
+ 432:	0e 94 fa 06 	call	0xdf4	; 0xdf4 <__umulhisi3>
+ 436:	96 95       	lsr	r25
+ 438:	87 95       	ror	r24
+ 43a:	96 95       	lsr	r25
+ 43c:	87 95       	ror	r24
+ 43e:	96 95       	lsr	r25
+ 440:	87 95       	ror	r24
+ 442:	9c 01       	movw	r18, r24
+ 444:	22 0f       	add	r18, r18
+ 446:	33 1f       	adc	r19, r19
+ 448:	88 0f       	add	r24, r24
+ 44a:	99 1f       	adc	r25, r25
+ 44c:	88 0f       	add	r24, r24
+ 44e:	99 1f       	adc	r25, r25
+ 450:	88 0f       	add	r24, r24
+ 452:	99 1f       	adc	r25, r25
+ 454:	82 0f       	add	r24, r18
+ 456:	93 1f       	adc	r25, r19
+ 458:	48 1b       	sub	r20, r24
+ 45a:	59 0b       	sbc	r21, r25
+thousands = (sum/1000)%10;
+segment_data[0] = dec_to_7seg[ones];
+segment_data[1] = dec_to_7seg[tens];
+segment_data[2] = dec_to_7seg[10];
+segment_data[3] = dec_to_7seg[hundreds];
+ 45c:	fa 01       	movw	r30, r20
+ 45e:	e0 50       	subi	r30, 0x00	; 0
+ 460:	ff 4f       	sbci	r31, 0xFF	; 255
+ 462:	80 81       	ld	r24, Z
+ 464:	80 93 89 02 	sts	0x0289, r24
+uint8_t hundreds;  
+uint8_t thousands;                         //determine how many digits there are 
+ones = sum%10;
+tens = (sum/10)%10;
+hundreds = (sum/100)%10;
+thousands = (sum/1000)%10;
+ 468:	9e 01       	movw	r18, r28
+ 46a:	36 95       	lsr	r19
+ 46c:	27 95       	ror	r18
+ 46e:	36 95       	lsr	r19
+ 470:	27 95       	ror	r18
+ 472:	36 95       	lsr	r19
+ 474:	27 95       	ror	r18
+ 476:	a5 ec       	ldi	r26, 0xC5	; 197
+ 478:	b0 e2       	ldi	r27, 0x20	; 32
+ 47a:	0e 94 fa 06 	call	0xdf4	; 0xdf4 <__umulhisi3>
+ 47e:	ac 01       	movw	r20, r24
+ 480:	52 95       	swap	r21
+ 482:	42 95       	swap	r20
+ 484:	4f 70       	andi	r20, 0x0F	; 15
+ 486:	45 27       	eor	r20, r21
+ 488:	5f 70       	andi	r21, 0x0F	; 15
+ 48a:	45 27       	eor	r20, r21
+ 48c:	9a 01       	movw	r18, r20
+ 48e:	ad ec       	ldi	r26, 0xCD	; 205
+ 490:	bc ec       	ldi	r27, 0xCC	; 204
+ 492:	0e 94 fa 06 	call	0xdf4	; 0xdf4 <__umulhisi3>
+ 496:	96 95       	lsr	r25
+ 498:	87 95       	ror	r24
+ 49a:	96 95       	lsr	r25
+ 49c:	87 95       	ror	r24
+ 49e:	96 95       	lsr	r25
+ 4a0:	87 95       	ror	r24
+ 4a2:	9c 01       	movw	r18, r24
+ 4a4:	22 0f       	add	r18, r18
+ 4a6:	33 1f       	adc	r19, r19
+ 4a8:	88 0f       	add	r24, r24
+ 4aa:	99 1f       	adc	r25, r25
+ 4ac:	88 0f       	add	r24, r24
+ 4ae:	99 1f       	adc	r25, r25
+ 4b0:	88 0f       	add	r24, r24
+ 4b2:	99 1f       	adc	r25, r25
+ 4b4:	82 0f       	add	r24, r18
+ 4b6:	93 1f       	adc	r25, r19
+ 4b8:	48 1b       	sub	r20, r24
+ 4ba:	59 0b       	sbc	r21, r25
+segment_data[0] = dec_to_7seg[ones];
+segment_data[1] = dec_to_7seg[tens];
+segment_data[2] = dec_to_7seg[10];
+segment_data[3] = dec_to_7seg[hundreds];
+segment_data[4] = dec_to_7seg[thousands];
+ 4bc:	fa 01       	movw	r30, r20
+ 4be:	e0 50       	subi	r30, 0x00	; 0
+ 4c0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 4c2:	80 81       	ld	r24, Z
+ 4c4:	80 93 8a 02 	sts	0x028A, r24
+if(sum<10){                                 //blancking leading 0s
+ 4c8:	ca 30       	cpi	r28, 0x0A	; 10
+ 4ca:	d1 05       	cpc	r29, r1
+ 4cc:	a0 f0       	brcs	.+40     	; 0x4f6 <segsum+0x168>
+  segment_data[1] = 0xFF;
+  segment_data[3] = 0xFF;
+  segment_data[4] = 0xFF;}
+else if(sum<100){
+ 4ce:	c4 36       	cpi	r28, 0x64	; 100
+ 4d0:	d1 05       	cpc	r29, r1
+ 4d2:	48 f0       	brcs	.+18     	; 0x4e6 <segsum+0x158>
+  segment_data[3] = 0xFF;
+  segment_data[4] = 0xFF;}
+else if(sum<1000){
+ 4d4:	c8 3e       	cpi	r28, 0xE8	; 232
+ 4d6:	d3 40       	sbci	r29, 0x03	; 3
+ 4d8:	18 f4       	brcc	.+6      	; 0x4e0 <segsum+0x152>
+  segment_data[4] = 0xFF;}
+ 4da:	8f ef       	ldi	r24, 0xFF	; 255
+ 4dc:	80 93 8a 02 	sts	0x028A, r24
+
+}
+ 4e0:	df 91       	pop	r29
+ 4e2:	cf 91       	pop	r28
+ 4e4:	08 95       	ret
+if(sum<10){                                 //blancking leading 0s
+  segment_data[1] = 0xFF;
+  segment_data[3] = 0xFF;
+  segment_data[4] = 0xFF;}
+else if(sum<100){
+  segment_data[3] = 0xFF;
+ 4e6:	8f ef       	ldi	r24, 0xFF	; 255
+ 4e8:	80 93 89 02 	sts	0x0289, r24
+  segment_data[4] = 0xFF;}
+ 4ec:	80 93 8a 02 	sts	0x028A, r24
+else if(sum<1000){
+  segment_data[4] = 0xFF;}
+
+}
+ 4f0:	df 91       	pop	r29
+ 4f2:	cf 91       	pop	r28
+ 4f4:	08 95       	ret
+segment_data[1] = dec_to_7seg[tens];
+segment_data[2] = dec_to_7seg[10];
+segment_data[3] = dec_to_7seg[hundreds];
+segment_data[4] = dec_to_7seg[thousands];
+if(sum<10){                                 //blancking leading 0s
+  segment_data[1] = 0xFF;
+ 4f6:	8f ef       	ldi	r24, 0xFF	; 255
+ 4f8:	80 93 87 02 	sts	0x0287, r24
+  segment_data[3] = 0xFF;
+ 4fc:	80 93 89 02 	sts	0x0289, r24
+  segment_data[4] = 0xFF;}
+ 500:	80 93 8a 02 	sts	0x028A, r24
+  segment_data[3] = 0xFF;
+  segment_data[4] = 0xFF;}
+else if(sum<1000){
+  segment_data[4] = 0xFF;}
+
+}
+ 504:	df 91       	pop	r29
+ 506:	cf 91       	pop	r28
+ 508:	08 95       	ret
+
+0000050a <__vector_33>:
+
+//****************************************************************************
+//This is the TWI ISR. Different actions are taken depending upon the value
+//of the TWI status register TWSR.
+//****************************************************************************/
+ISR(TWI_vect){
+ 50a:	1f 92       	push	r1
+ 50c:	0f 92       	push	r0
+ 50e:	0f b6       	in	r0, 0x3f	; 63
+ 510:	0f 92       	push	r0
+ 512:	11 24       	eor	r1, r1
+ 514:	0b b6       	in	r0, 0x3b	; 59
+ 516:	0f 92       	push	r0
+ 518:	2f 93       	push	r18
+ 51a:	3f 93       	push	r19
+ 51c:	8f 93       	push	r24
+ 51e:	9f 93       	push	r25
+ 520:	af 93       	push	r26
+ 522:	bf 93       	push	r27
+ 524:	ef 93       	push	r30
+ 526:	ff 93       	push	r31
+  static uint8_t twi_buf_ptr;  //index into the buffer being used 
+
+  switch (TWSR) {
+ 528:	e0 91 71 00 	lds	r30, 0x0071
+ 52c:	8e 2f       	mov	r24, r30
+ 52e:	90 e0       	ldi	r25, 0x00	; 0
+ 530:	fc 01       	movw	r30, r24
+ 532:	38 97       	sbiw	r30, 0x08	; 8
+ 534:	e1 35       	cpi	r30, 0x51	; 81
+ 536:	f1 05       	cpc	r31, r1
+ 538:	b0 f0       	brcs	.+44     	; 0x566 <__vector_33+0x5c>
+      break;      
+    case TW_MT_ARB_LOST:                //Arbitration lost 
+      TWCR = TWCR_START;                //initiate RESTART 
+      break;
+    default:                            //Error occured, save TWSR 
+      twi_state = TWSR;         
+ 53a:	80 91 71 00 	lds	r24, 0x0071
+ 53e:	80 93 8b 02 	sts	0x028B, r24
+      TWCR = TWCR_RST;                  //Reset TWI, disable interupts 
+ 542:	84 e0       	ldi	r24, 0x04	; 4
+ 544:	80 93 74 00 	sts	0x0074, r24
+  }//switch
+}//TWI_isr
+ 548:	ff 91       	pop	r31
+ 54a:	ef 91       	pop	r30
+ 54c:	bf 91       	pop	r27
+ 54e:	af 91       	pop	r26
+ 550:	9f 91       	pop	r25
+ 552:	8f 91       	pop	r24
+ 554:	3f 91       	pop	r19
+ 556:	2f 91       	pop	r18
+ 558:	0f 90       	pop	r0
+ 55a:	0b be       	out	0x3b, r0	; 59
+ 55c:	0f 90       	pop	r0
+ 55e:	0f be       	out	0x3f, r0	; 63
+ 560:	0f 90       	pop	r0
+ 562:	1f 90       	pop	r1
+ 564:	18 95       	reti
+//of the TWI status register TWSR.
+//****************************************************************************/
+ISR(TWI_vect){
+  static uint8_t twi_buf_ptr;  //index into the buffer being used 
+
+  switch (TWSR) {
+ 566:	ea 5b       	subi	r30, 0xBA	; 186
+ 568:	ff 4f       	sbci	r31, 0xFF	; 255
+ 56a:	0c 94 f1 06 	jmp	0xde2	; 0xde2 <__tablejump2__>
+    case TW_MR_SLA_ACK:                 //SLA+R xmitted and ACK rcvd
+      if (twi_buf_ptr < (twi_msg_size-1)){TWCR = TWCR_RACK;}  //ACK each byte
+      else                               {TWCR = TWCR_RNACK;} //NACK last byte 
+      break; 
+    case TW_MR_DATA_NACK: //Data byte was rcvd and NACK xmitted
+      twi_buf[twi_buf_ptr] = TWDR;      //save last byte to buffer
+ 56e:	80 91 29 02 	lds	r24, 0x0229
+ 572:	e0 91 8c 02 	lds	r30, 0x028C
+ 576:	f0 91 8d 02 	lds	r31, 0x028D
+ 57a:	e8 0f       	add	r30, r24
+ 57c:	f1 1d       	adc	r31, r1
+ 57e:	80 91 73 00 	lds	r24, 0x0073
+ 582:	80 83       	st	Z, r24
+      TWCR = TWCR_STOP;                 //initiate a STOP
+ 584:	84 e9       	ldi	r24, 0x94	; 148
+ 586:	80 93 74 00 	sts	0x0074, r24
+      break;      
+ 58a:	de cf       	rjmp	.-68     	; 0x548 <__vector_33+0x3e>
+  static uint8_t twi_buf_ptr;  //index into the buffer being used 
+
+  switch (TWSR) {
+    case TW_START:          //START has been xmitted, fall thorough
+    case TW_REP_START:      //Repeated START was xmitted
+      TWDR = twi_bus_addr;  //load up the twi bus address
+ 58c:	80 91 8e 02 	lds	r24, 0x028E
+ 590:	80 93 73 00 	sts	0x0073, r24
+      twi_buf_ptr = 0;      //initalize buffer pointer 
+ 594:	10 92 29 02 	sts	0x0229, r1
+      TWCR = TWCR_SEND;     //send SLA+RW
+ 598:	85 e8       	ldi	r24, 0x85	; 133
+ 59a:	80 93 74 00 	sts	0x0074, r24
+      break;
+ 59e:	d4 cf       	rjmp	.-88     	; 0x548 <__vector_33+0x3e>
+    case TW_MT_SLA_ACK:     //SLA+W was xmitted and ACK rcvd, fall through 
+    case TW_MT_DATA_ACK:                //Data byte was xmitted and ACK rcvd
+      if (twi_buf_ptr < twi_msg_size){  //send data till done
+ 5a0:	80 91 29 02 	lds	r24, 0x0229
+ 5a4:	90 91 8f 02 	lds	r25, 0x028F
+ 5a8:	89 17       	cp	r24, r25
+ 5aa:	60 f7       	brcc	.-40     	; 0x584 <__vector_33+0x7a>
+        TWDR = twi_buf[twi_buf_ptr++];  //load next and postincrement index
+ 5ac:	e0 91 8c 02 	lds	r30, 0x028C
+ 5b0:	f0 91 8d 02 	lds	r31, 0x028D
+ 5b4:	91 e0       	ldi	r25, 0x01	; 1
+ 5b6:	98 0f       	add	r25, r24
+ 5b8:	90 93 29 02 	sts	0x0229, r25
+ 5bc:	e8 0f       	add	r30, r24
+ 5be:	f1 1d       	adc	r31, r1
+ 5c0:	80 81       	ld	r24, Z
+ 5c2:	80 93 73 00 	sts	0x0073, r24
+        TWCR = TWCR_SEND;               //send next byte 
+ 5c6:	85 e8       	ldi	r24, 0x85	; 133
+ 5c8:	80 93 74 00 	sts	0x0074, r24
+ 5cc:	bd cf       	rjmp	.-134    	; 0x548 <__vector_33+0x3e>
+    case TW_MR_DATA_NACK: //Data byte was rcvd and NACK xmitted
+      twi_buf[twi_buf_ptr] = TWDR;      //save last byte to buffer
+      TWCR = TWCR_STOP;                 //initiate a STOP
+      break;      
+    case TW_MT_ARB_LOST:                //Arbitration lost 
+      TWCR = TWCR_START;                //initiate RESTART 
+ 5ce:	85 ea       	ldi	r24, 0xA5	; 165
+ 5d0:	80 93 74 00 	sts	0x0074, r24
+      break;
+ 5d4:	b9 cf       	rjmp	.-142    	; 0x548 <__vector_33+0x3e>
+ 5d6:	20 91 29 02 	lds	r18, 0x0229
+      else{TWCR = TWCR_STOP;}           //last byte sent, send STOP 
+      break;
+    case TW_MR_DATA_ACK:                //Data byte has been rcvd, ACK xmitted, fall through
+      twi_buf[twi_buf_ptr++] = TWDR;    //fill buffer with rcvd data
+    case TW_MR_SLA_ACK:                 //SLA+R xmitted and ACK rcvd
+      if (twi_buf_ptr < (twi_msg_size-1)){TWCR = TWCR_RACK;}  //ACK each byte
+ 5da:	80 91 8f 02 	lds	r24, 0x028F
+ 5de:	30 e0       	ldi	r19, 0x00	; 0
+ 5e0:	90 e0       	ldi	r25, 0x00	; 0
+ 5e2:	01 97       	sbiw	r24, 0x01	; 1
+ 5e4:	28 17       	cp	r18, r24
+ 5e6:	39 07       	cpc	r19, r25
+ 5e8:	dc f4       	brge	.+54     	; 0x620 <__vector_33+0x116>
+ 5ea:	85 ec       	ldi	r24, 0xC5	; 197
+ 5ec:	80 93 74 00 	sts	0x0074, r24
+ 5f0:	ab cf       	rjmp	.-170    	; 0x548 <__vector_33+0x3e>
+        TWCR = TWCR_SEND;               //send next byte 
+      }
+      else{TWCR = TWCR_STOP;}           //last byte sent, send STOP 
+      break;
+    case TW_MR_DATA_ACK:                //Data byte has been rcvd, ACK xmitted, fall through
+      twi_buf[twi_buf_ptr++] = TWDR;    //fill buffer with rcvd data
+ 5f2:	e0 91 8c 02 	lds	r30, 0x028C
+ 5f6:	f0 91 8d 02 	lds	r31, 0x028D
+ 5fa:	80 91 29 02 	lds	r24, 0x0229
+ 5fe:	21 e0       	ldi	r18, 0x01	; 1
+ 600:	28 0f       	add	r18, r24
+ 602:	20 93 29 02 	sts	0x0229, r18
+ 606:	e8 0f       	add	r30, r24
+ 608:	f1 1d       	adc	r31, r1
+ 60a:	80 91 73 00 	lds	r24, 0x0073
+ 60e:	80 83       	st	Z, r24
+    case TW_MR_SLA_ACK:                 //SLA+R xmitted and ACK rcvd
+      if (twi_buf_ptr < (twi_msg_size-1)){TWCR = TWCR_RACK;}  //ACK each byte
+ 610:	80 91 8f 02 	lds	r24, 0x028F
+ 614:	30 e0       	ldi	r19, 0x00	; 0
+ 616:	90 e0       	ldi	r25, 0x00	; 0
+ 618:	01 97       	sbiw	r24, 0x01	; 1
+ 61a:	28 17       	cp	r18, r24
+ 61c:	39 07       	cpc	r19, r25
+ 61e:	2c f3       	brlt	.-54     	; 0x5ea <__vector_33+0xe0>
+      else                               {TWCR = TWCR_RNACK;} //NACK last byte 
+ 620:	85 e8       	ldi	r24, 0x85	; 133
+ 622:	80 93 74 00 	sts	0x0074, r24
+ 626:	90 cf       	rjmp	.-224    	; 0x548 <__vector_33+0x3e>
+
+00000628 <twi_busy>:
+//Call this function to test if the TWI unit is busy transferring data. The TWI
+//code uses the the interrupt enable bit (TWIE) to indicate if the TWI unit
+//is busy or not.  This protocol must be maintained for correct operation.
+//*****************************************************************************
+uint8_t twi_busy(void){
+  return (bit_is_set(TWCR,TWIE)); //if interrupt is enabled, twi is busy
+ 628:	80 91 74 00 	lds	r24, 0x0074
+}
+ 62c:	81 70       	andi	r24, 0x01	; 1
+ 62e:	08 95       	ret
+
+00000630 <twi_start_wr>:
+//Call this function to test if the TWI unit is busy transferring data. The TWI
+//code uses the the interrupt enable bit (TWIE) to indicate if the TWI unit
+//is busy or not.  This protocol must be maintained for correct operation.
+//*****************************************************************************
+uint8_t twi_busy(void){
+  return (bit_is_set(TWCR,TWIE)); //if interrupt is enabled, twi is busy
+ 630:	90 91 74 00 	lds	r25, 0x0074
+//Initiates a write transfer. Loads global variables. Sends START. ISR handles
+//the rest.
+//****************************************************************************
+void twi_start_wr(uint8_t twi_addr, uint8_t *twi_data, uint8_t byte_cnt){
+
+  while(twi_busy());                    //wait till TWI rdy for next xfer
+ 634:	90 fd       	sbrc	r25, 0
+ 636:	fc cf       	rjmp	.-8      	; 0x630 <twi_start_wr>
+  twi_bus_addr = (twi_addr & ~TW_READ); //set twi bus address, mark as write 
+ 638:	8e 7f       	andi	r24, 0xFE	; 254
+ 63a:	80 93 8e 02 	sts	0x028E, r24
+  twi_buf = twi_data;                   //load pointer to write buffer
+ 63e:	70 93 8d 02 	sts	0x028D, r23
+ 642:	60 93 8c 02 	sts	0x028C, r22
+  twi_msg_size = byte_cnt;              //load size of xfer 
+ 646:	40 93 8f 02 	sts	0x028F, r20
+  TWCR = TWCR_START;                    //initiate START
+ 64a:	85 ea       	ldi	r24, 0xA5	; 165
+ 64c:	80 93 74 00 	sts	0x0074, r24
+ 650:	08 95       	ret
+
+00000652 <twi_start_rd>:
+//Call this function to test if the TWI unit is busy transferring data. The TWI
+//code uses the the interrupt enable bit (TWIE) to indicate if the TWI unit
+//is busy or not.  This protocol must be maintained for correct operation.
+//*****************************************************************************
+uint8_t twi_busy(void){
+  return (bit_is_set(TWCR,TWIE)); //if interrupt is enabled, twi is busy
+ 652:	90 91 74 00 	lds	r25, 0x0074
+//Initiates a read transfer. Loads global variables. Sends START. ISR handles
+//the rest.
+//****************************************************************************
+void twi_start_rd(uint8_t twi_addr, uint8_t *twi_data, uint8_t byte_cnt){
+
+  while(twi_busy());                   //wait till TWI rdy for next xfer
+ 656:	90 fd       	sbrc	r25, 0
+ 658:	fc cf       	rjmp	.-8      	; 0x652 <twi_start_rd>
+  twi_bus_addr = (twi_addr | TW_READ); //set twi bus address, mark as read  
+ 65a:	81 60       	ori	r24, 0x01	; 1
+ 65c:	80 93 8e 02 	sts	0x028E, r24
+  twi_buf = twi_data;                  //load pointer to write buffer
+ 660:	70 93 8d 02 	sts	0x028D, r23
+ 664:	60 93 8c 02 	sts	0x028C, r22
+  twi_msg_size = byte_cnt;             //load size of xfer 
+ 668:	40 93 8f 02 	sts	0x028F, r20
+  TWCR = TWCR_START;                   //initiate START
+ 66c:	85 ea       	ldi	r24, 0xA5	; 165
+ 66e:	80 93 74 00 	sts	0x0074, r24
+ 672:	08 95       	ret
+
+00000674 <init_twi>:
+//10K pullups are present on the board
+//For the alarm clock an additional 4.7K resistor is also there for pullup
+//******************************************************************************
+
+void init_twi(){
+  TWDR = 0xFF;     //release SDA, default contents
+ 674:	8f ef       	ldi	r24, 0xFF	; 255
+ 676:	80 93 73 00 	sts	0x0073, r24
+  TWSR = 0x00;     //prescaler value = 1
+ 67a:	10 92 71 00 	sts	0x0071, r1
+  TWBR = TWI_TWBR; //defined in twi_master.h 
+ 67e:	8c e0       	ldi	r24, 0x0C	; 12
+ 680:	80 93 70 00 	sts	0x0070, r24
+ 684:	08 95       	ret
+
+00000686 <get_int_status>:
+//
+//TODO: update for interrupts
+// 
+uint8_t get_int_status(){
+
+    si4734_wr_buf[0] = GET_INT_STATUS;              
+ 686:	84 e1       	ldi	r24, 0x14	; 20
+ 688:	80 93 90 02 	sts	0x0290, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 1); //send get_int_status command
+ 68c:	41 e0       	ldi	r20, 0x01	; 1
+ 68e:	60 e9       	ldi	r22, 0x90	; 144
+ 690:	72 e0       	ldi	r23, 0x02	; 2
+ 692:	82 e2       	ldi	r24, 0x22	; 34
+ 694:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+    while( twi_busy() ){}; //spin while previous TWI transaction finshes
+ 698:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 69c:	81 11       	cpse	r24, r1
+ 69e:	fc cf       	rjmp	.-8      	; 0x698 <get_int_status+0x12>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 6a0:	8f ea       	ldi	r24, 0xAF	; 175
+ 6a2:	94 e0       	ldi	r25, 0x04	; 4
+ 6a4:	01 97       	sbiw	r24, 0x01	; 1
+ 6a6:	f1 f7       	brne	.-4      	; 0x6a4 <get_int_status+0x1e>
+ 6a8:	00 c0       	rjmp	.+0      	; 0x6aa <get_int_status+0x24>
+ 6aa:	00 00       	nop
+    _delay_us(300);        //si4734 process delay
+    twi_start_rd(SI4734_ADDRESS, si4734_rd_buf, 1); //get the interrupt status 
+ 6ac:	41 e0       	ldi	r20, 0x01	; 1
+ 6ae:	62 eb       	ldi	r22, 0xB2	; 178
+ 6b0:	72 e0       	ldi	r23, 0x02	; 2
+ 6b2:	82 e2       	ldi	r24, 0x22	; 34
+ 6b4:	0e 94 29 03 	call	0x652	; 0x652 <twi_start_rd>
+    while( twi_busy() ){}; //spin while previous TWI transaction finshes
+ 6b8:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 6bc:	81 11       	cpse	r24, r1
+ 6be:	fc cf       	rjmp	.-8      	; 0x6b8 <get_int_status+0x32>
+    return(si4734_rd_buf[0]);
+}
+ 6c0:	80 91 b2 02 	lds	r24, 0x02B2
+ 6c4:	08 95       	ret
+
+000006c6 <fm_tune_freq>:
+//
+//takes current_fm_freq and sends it to the radio chip
+//
+
+void fm_tune_freq(){
+  si4734_wr_buf[0] = 0x20;  //fm tune command
+ 6c6:	e0 e9       	ldi	r30, 0x90	; 144
+ 6c8:	f2 e0       	ldi	r31, 0x02	; 2
+ 6ca:	80 e2       	ldi	r24, 0x20	; 32
+ 6cc:	80 83       	st	Z, r24
+  si4734_wr_buf[1] = 0x00;  //no FREEZE and no FAST tune
+ 6ce:	11 82       	std	Z+1, r1	; 0x01
+  si4734_wr_buf[2] = (uint8_t)(current_fm_freq >> 8); //freq high byte
+ 6d0:	80 91 0b 01 	lds	r24, 0x010B
+ 6d4:	90 91 0c 01 	lds	r25, 0x010C
+ 6d8:	92 83       	std	Z+2, r25	; 0x02
+  si4734_wr_buf[3] = (uint8_t)(current_fm_freq);      //freq low byte
+ 6da:	83 83       	std	Z+3, r24	; 0x03
+  si4734_wr_buf[4] = 0x00;  //antenna tuning capactior
+ 6dc:	14 82       	std	Z+4, r1	; 0x04
+  //send fm tune command
+  STC_interrupt = FALSE;
+ 6de:	10 92 b1 02 	sts	0x02B1, r1
+  twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 5);
+ 6e2:	45 e0       	ldi	r20, 0x05	; 5
+ 6e4:	bf 01       	movw	r22, r30
+ 6e6:	82 e2       	ldi	r24, 0x22	; 34
+ 6e8:	0c 94 18 03 	jmp	0x630	; 0x630 <twi_start_wr>
+
+000006ec <am_tune_freq>:
+//
+//takes current_am_freq and sends it to the radio chip
+//
+
+void am_tune_freq(){
+  si4734_wr_buf[0] = AM_TUNE_FREQ; //am tune command
+ 6ec:	80 e4       	ldi	r24, 0x40	; 64
+ 6ee:	80 93 90 02 	sts	0x0290, r24
+  si4734_wr_buf[1] = 0x00;         //no FAST tune
+ 6f2:	10 92 91 02 	sts	0x0291, r1
+  si4734_wr_buf[2] = (uint8_t)(current_am_freq >> 8); //freq high byte
+ 6f6:	80 91 58 02 	lds	r24, 0x0258
+ 6fa:	90 91 59 02 	lds	r25, 0x0259
+ 6fe:	90 93 92 02 	sts	0x0292, r25
+  si4734_wr_buf[3] = (uint8_t)(current_am_freq);      //freq low byte
+ 702:	80 93 93 02 	sts	0x0293, r24
+  si4734_wr_buf[4] = 0x00;  //antenna tuning capactior high byte
+ 706:	10 92 94 02 	sts	0x0294, r1
+  si4734_wr_buf[5] = 0x00;  //antenna tuning capactior low byte
+ 70a:	10 92 95 02 	sts	0x0295, r1
+  //send am tune command
+  STC_interrupt = FALSE;
+ 70e:	10 92 b1 02 	sts	0x02B1, r1
+  twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 6);
+ 712:	46 e0       	ldi	r20, 0x06	; 6
+ 714:	60 e9       	ldi	r22, 0x90	; 144
+ 716:	72 e0       	ldi	r23, 0x02	; 2
+ 718:	82 e2       	ldi	r24, 0x22	; 34
+ 71a:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+  while( ! STC_interrupt ){}; //spin until the tune command finishes 
+ 71e:	80 91 b1 02 	lds	r24, 0x02B1
+ 722:	88 23       	and	r24, r24
+ 724:	e1 f3       	breq	.-8      	; 0x71e <am_tune_freq+0x32>
+}
+ 726:	08 95       	ret
+
+00000728 <sw_tune_freq>:
+//
+//takes current_sw_freq and sends it to the radio chip
+//antcap low byte is 0x01 as per datasheet
+
+void sw_tune_freq(){
+  si4734_wr_buf[0] = 0x40;  //am tune command
+ 728:	e0 e9       	ldi	r30, 0x90	; 144
+ 72a:	f2 e0       	ldi	r31, 0x02	; 2
+ 72c:	80 e4       	ldi	r24, 0x40	; 64
+ 72e:	80 83       	st	Z, r24
+  si4734_wr_buf[1] = 0x00;  //no FAST tune
+ 730:	11 82       	std	Z+1, r1	; 0x01
+  si4734_wr_buf[2] = (uint8_t)(current_sw_freq >> 8); //freq high byte
+ 732:	80 91 82 02 	lds	r24, 0x0282
+ 736:	90 91 83 02 	lds	r25, 0x0283
+ 73a:	92 83       	std	Z+2, r25	; 0x02
+  si4734_wr_buf[3] = (uint8_t)(current_sw_freq);      //freq low byte
+ 73c:	83 83       	std	Z+3, r24	; 0x03
+  si4734_wr_buf[4] = 0x00;  //antenna tuning capactior high byte
+ 73e:	14 82       	std	Z+4, r1	; 0x04
+  si4734_wr_buf[5] = 0x01;  //antenna tuning capactior low byte 
+ 740:	81 e0       	ldi	r24, 0x01	; 1
+ 742:	85 83       	std	Z+5, r24	; 0x05
+  //send am tune command
+  twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 6);
+ 744:	46 e0       	ldi	r20, 0x06	; 6
+ 746:	bf 01       	movw	r22, r30
+ 748:	82 e2       	ldi	r24, 0x22	; 34
+ 74a:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 74e:	2f ef       	ldi	r18, 0xFF	; 255
+ 750:	87 ee       	ldi	r24, 0xE7	; 231
+ 752:	93 e0       	ldi	r25, 0x03	; 3
+ 754:	21 50       	subi	r18, 0x01	; 1
+ 756:	80 40       	sbci	r24, 0x00	; 0
+ 758:	90 40       	sbci	r25, 0x00	; 0
+ 75a:	e1 f7       	brne	.-8      	; 0x754 <sw_tune_freq+0x2c>
+ 75c:	00 c0       	rjmp	.+0      	; 0x75e <sw_tune_freq+0x36>
+ 75e:	00 00       	nop
+ 760:	08 95       	ret
+
+00000762 <radio_pwr_dwn>:
+//
+
+void radio_pwr_dwn(){
+
+//save current frequency to EEPROM
+switch(current_radio_band){
+ 762:	80 91 15 02 	lds	r24, 0x0215
+ 766:	90 91 16 02 	lds	r25, 0x0216
+ 76a:	81 30       	cpi	r24, 0x01	; 1
+ 76c:	91 05       	cpc	r25, r1
+ 76e:	51 f1       	breq	.+84     	; 0x7c4 <radio_pwr_dwn+0x62>
+ 770:	00 f1       	brcs	.+64     	; 0x7b2 <radio_pwr_dwn+0x50>
+ 772:	02 97       	sbiw	r24, 0x02	; 2
+ 774:	41 f4       	brne	.+16     	; 0x786 <radio_pwr_dwn+0x24>
+  case(FM) : eeprom_write_word(&eeprom_fm_freq, current_fm_freq); break;
+  case(AM) : eeprom_write_word(&eeprom_am_freq, current_am_freq); break;
+  case(SW) : eeprom_write_word(&eeprom_sw_freq, current_sw_freq); break;
+ 776:	60 91 82 02 	lds	r22, 0x0282
+ 77a:	70 91 83 02 	lds	r23, 0x0283
+ 77e:	84 e8       	ldi	r24, 0x84	; 132
+ 780:	92 e0       	ldi	r25, 0x02	; 2
+ 782:	0e 94 59 07 	call	0xeb2	; 0xeb2 <eeprom_write_word>
+  default  : break;
+}//switch      
+
+  eeprom_write_byte(&eeprom_volume, current_volume); //save current volume level
+ 786:	60 91 57 02 	lds	r22, 0x0257
+ 78a:	8a e2       	ldi	r24, 0x2A	; 42
+ 78c:	92 e0       	ldi	r25, 0x02	; 2
+ 78e:	0e 94 4c 07 	call	0xe98	; 0xe98 <eeprom_write_byte>
+
+//send fm power down command
+    si4734_wr_buf[0] = 0x11;
+ 792:	81 e1       	ldi	r24, 0x11	; 17
+ 794:	80 93 90 02 	sts	0x0290, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 1);
+ 798:	41 e0       	ldi	r20, 0x01	; 1
+ 79a:	60 e9       	ldi	r22, 0x90	; 144
+ 79c:	72 e0       	ldi	r23, 0x02	; 2
+ 79e:	82 e2       	ldi	r24, 0x22	; 34
+ 7a0:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 7a4:	87 ed       	ldi	r24, 0xD7	; 215
+ 7a6:	94 e0       	ldi	r25, 0x04	; 4
+ 7a8:	01 97       	sbiw	r24, 0x01	; 1
+ 7aa:	f1 f7       	brne	.-4      	; 0x7a8 <radio_pwr_dwn+0x46>
+ 7ac:	00 c0       	rjmp	.+0      	; 0x7ae <radio_pwr_dwn+0x4c>
+ 7ae:	00 00       	nop
+ 7b0:	08 95       	ret
+
+void radio_pwr_dwn(){
+
+//save current frequency to EEPROM
+switch(current_radio_band){
+  case(FM) : eeprom_write_word(&eeprom_fm_freq, current_fm_freq); break;
+ 7b2:	60 91 0b 01 	lds	r22, 0x010B
+ 7b6:	70 91 0c 01 	lds	r23, 0x010C
+ 7ba:	8b e2       	ldi	r24, 0x2B	; 43
+ 7bc:	92 e0       	ldi	r25, 0x02	; 2
+ 7be:	0e 94 59 07 	call	0xeb2	; 0xeb2 <eeprom_write_word>
+ 7c2:	e1 cf       	rjmp	.-62     	; 0x786 <radio_pwr_dwn+0x24>
+  case(AM) : eeprom_write_word(&eeprom_am_freq, current_am_freq); break;
+ 7c4:	60 91 58 02 	lds	r22, 0x0258
+ 7c8:	70 91 59 02 	lds	r23, 0x0259
+ 7cc:	85 e5       	ldi	r24, 0x55	; 85
+ 7ce:	92 e0       	ldi	r25, 0x02	; 2
+ 7d0:	0e 94 59 07 	call	0xeb2	; 0xeb2 <eeprom_write_word>
+ 7d4:	d8 cf       	rjmp	.-80     	; 0x786 <radio_pwr_dwn+0x24>
+
+000007d6 <fm_rsq_status>:
+//inside the chip. 
+//TODO: Dang, thats a big delay, could cause problems, best check out.
+//
+void fm_rsq_status(){
+
+    si4734_wr_buf[0] = FM_RSQ_STATUS;            //fm_rsq_status command
+ 7d6:	83 e2       	ldi	r24, 0x23	; 35
+ 7d8:	80 93 90 02 	sts	0x0290, r24
+    si4734_wr_buf[1] = FM_RSQ_STATUS_IN_INTACK;  //clear STCINT bit if set
+ 7dc:	81 e0       	ldi	r24, 0x01	; 1
+ 7de:	80 93 91 02 	sts	0x0291, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 2);
+ 7e2:	42 e0       	ldi	r20, 0x02	; 2
+ 7e4:	60 e9       	ldi	r22, 0x90	; 144
+ 7e6:	72 e0       	ldi	r23, 0x02	; 2
+ 7e8:	82 e2       	ldi	r24, 0x22	; 34
+ 7ea:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+    while(twi_busy()){}; //spin while previous TWI transaction finshes
+ 7ee:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 7f2:	81 11       	cpse	r24, r1
+ 7f4:	fc cf       	rjmp	.-8      	; 0x7ee <fm_rsq_status+0x18>
+ 7f6:	8f ea       	ldi	r24, 0xAF	; 175
+ 7f8:	94 e0       	ldi	r25, 0x04	; 4
+ 7fa:	01 97       	sbiw	r24, 0x01	; 1
+ 7fc:	f1 f7       	brne	.-4      	; 0x7fa <fm_rsq_status+0x24>
+ 7fe:	00 c0       	rjmp	.+0      	; 0x800 <fm_rsq_status+0x2a>
+ 800:	00 00       	nop
+    _delay_us(300);      //delay for si4734 to process
+    //This is a blind wait. Waiting for CTS interrupt here would tell you 
+    //when the command is received and has been processed.
+    //get the fm tune status 
+    twi_start_rd(SI4734_ADDRESS, si4734_tune_status_buf, 8);
+ 802:	48 e0       	ldi	r20, 0x08	; 8
+ 804:	69 e9       	ldi	r22, 0x99	; 153
+ 806:	72 e0       	ldi	r23, 0x02	; 2
+ 808:	82 e2       	ldi	r24, 0x22	; 34
+ 80a:	0e 94 29 03 	call	0x652	; 0x652 <twi_start_rd>
+    while(twi_busy()){}; //spin while previous TWI transaction finshes
+ 80e:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 812:	81 11       	cpse	r24, r1
+ 814:	fc cf       	rjmp	.-8      	; 0x80e <fm_rsq_status+0x38>
+}
+ 816:	08 95       	ret
+
+00000818 <fm_tune_status>:
+//is cleared.
+//TODO: Dang, thats a big delay, could cause problems, best check out.
+//
+void fm_tune_status(){
+
+    si4734_wr_buf[0] = FM_TUNE_STATUS;            //fm_tune_status command
+ 818:	82 e2       	ldi	r24, 0x22	; 34
+ 81a:	80 93 90 02 	sts	0x0290, r24
+    si4734_wr_buf[1] = FM_TUNE_STATUS_IN_INTACK;  //clear STCINT bit if set
+ 81e:	81 e0       	ldi	r24, 0x01	; 1
+ 820:	80 93 91 02 	sts	0x0291, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 2);
+ 824:	42 e0       	ldi	r20, 0x02	; 2
+ 826:	60 e9       	ldi	r22, 0x90	; 144
+ 828:	72 e0       	ldi	r23, 0x02	; 2
+ 82a:	82 e2       	ldi	r24, 0x22	; 34
+ 82c:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+    while(twi_busy()){}; //spin while previous TWI transaction finshes
+ 830:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 834:	81 11       	cpse	r24, r1
+ 836:	fc cf       	rjmp	.-8      	; 0x830 <fm_tune_status+0x18>
+ 838:	8f ea       	ldi	r24, 0xAF	; 175
+ 83a:	94 e0       	ldi	r25, 0x04	; 4
+ 83c:	01 97       	sbiw	r24, 0x01	; 1
+ 83e:	f1 f7       	brne	.-4      	; 0x83c <fm_tune_status+0x24>
+ 840:	00 c0       	rjmp	.+0      	; 0x842 <fm_tune_status+0x2a>
+ 842:	00 00       	nop
+    _delay_us(300);        //delay for si4734 to process
+    //get the fm tune status 
+    twi_start_rd(SI4734_ADDRESS, si4734_tune_status_buf, 8);
+ 844:	48 e0       	ldi	r20, 0x08	; 8
+ 846:	69 e9       	ldi	r22, 0x99	; 153
+ 848:	72 e0       	ldi	r23, 0x02	; 2
+ 84a:	82 e2       	ldi	r24, 0x22	; 34
+ 84c:	0e 94 29 03 	call	0x652	; 0x652 <twi_start_rd>
+    while( twi_busy() ){}; //spin till TWI read transaction finshes
+ 850:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 854:	81 11       	cpse	r24, r1
+ 856:	fc cf       	rjmp	.-8      	; 0x850 <fm_tune_status+0x38>
+}
+ 858:	08 95       	ret
+
+0000085a <am_tune_status>:
+//TODO: could probably just have one tune_status() function
+//TODO: Dang, thats a big delay, could cause problems, best check out.
+
+void am_tune_status(){
+
+    si4734_wr_buf[0] = AM_TUNE_STATUS;            //fm_tune_status command
+ 85a:	82 e4       	ldi	r24, 0x42	; 66
+ 85c:	80 93 90 02 	sts	0x0290, r24
+    si4734_wr_buf[1] = AM_TUNE_STATUS_IN_INTACK;  //clear STCINT bit if set
+ 860:	81 e0       	ldi	r24, 0x01	; 1
+ 862:	80 93 91 02 	sts	0x0291, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 2);
+ 866:	42 e0       	ldi	r20, 0x02	; 2
+ 868:	60 e9       	ldi	r22, 0x90	; 144
+ 86a:	72 e0       	ldi	r23, 0x02	; 2
+ 86c:	82 e2       	ldi	r24, 0x22	; 34
+ 86e:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+    while(twi_busy()){}; //spin while previous TWI transaction finshes
+ 872:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 876:	81 11       	cpse	r24, r1
+ 878:	fc cf       	rjmp	.-8      	; 0x872 <am_tune_status+0x18>
+ 87a:	8f ea       	ldi	r24, 0xAF	; 175
+ 87c:	94 e0       	ldi	r25, 0x04	; 4
+ 87e:	01 97       	sbiw	r24, 0x01	; 1
+ 880:	f1 f7       	brne	.-4      	; 0x87e <am_tune_status+0x24>
+ 882:	00 c0       	rjmp	.+0      	; 0x884 <am_tune_status+0x2a>
+ 884:	00 00       	nop
+    _delay_us(300);        //delay for si4734 to process command
+    //get the am tune status 
+    twi_start_rd(SI4734_ADDRESS, si4734_tune_status_buf, 8);
+ 886:	48 e0       	ldi	r20, 0x08	; 8
+ 888:	69 e9       	ldi	r22, 0x99	; 153
+ 88a:	72 e0       	ldi	r23, 0x02	; 2
+ 88c:	82 e2       	ldi	r24, 0x22	; 34
+ 88e:	0c 94 29 03 	jmp	0x652	; 0x652 <twi_start_rd>
+
+00000892 <am_rsq_status>:
+//
+//TODO: Dang, thats a big delay, could cause problems, best check out.
+
+void am_rsq_status(){
+
+    si4734_wr_buf[0] = AM_RSQ_STATUS;            //am_rsq_status command
+ 892:	83 e4       	ldi	r24, 0x43	; 67
+ 894:	80 93 90 02 	sts	0x0290, r24
+    si4734_wr_buf[1] = AM_RSQ_STATUS_IN_INTACK;  //clear STCINT bit if set
+ 898:	81 e0       	ldi	r24, 0x01	; 1
+ 89a:	80 93 91 02 	sts	0x0291, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 2);
+ 89e:	42 e0       	ldi	r20, 0x02	; 2
+ 8a0:	60 e9       	ldi	r22, 0x90	; 144
+ 8a2:	72 e0       	ldi	r23, 0x02	; 2
+ 8a4:	82 e2       	ldi	r24, 0x22	; 34
+ 8a6:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+    while(twi_busy()){}; //spin while previous TWI transaction finshes
+ 8aa:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ 8ae:	81 11       	cpse	r24, r1
+ 8b0:	fc cf       	rjmp	.-8      	; 0x8aa <am_rsq_status+0x18>
+ 8b2:	8f ea       	ldi	r24, 0xAF	; 175
+ 8b4:	94 e0       	ldi	r25, 0x04	; 4
+ 8b6:	01 97       	sbiw	r24, 0x01	; 1
+ 8b8:	f1 f7       	brne	.-4      	; 0x8b6 <am_rsq_status+0x24>
+ 8ba:	00 c0       	rjmp	.+0      	; 0x8bc <am_rsq_status+0x2a>
+ 8bc:	00 00       	nop
+    _delay_us(300);        //delay for si4734 to process command
+    //get the fm tune status 
+    twi_start_rd(SI4734_ADDRESS, si4734_tune_status_buf, 8);
+ 8be:	48 e0       	ldi	r20, 0x08	; 8
+ 8c0:	69 e9       	ldi	r22, 0x99	; 153
+ 8c2:	72 e0       	ldi	r23, 0x02	; 2
+ 8c4:	82 e2       	ldi	r24, 0x22	; 34
+ 8c6:	0c 94 29 03 	jmp	0x652	; 0x652 <twi_start_rd>
+
+000008ca <set_property>:
+//The set property command does not have a indication that it has completed. This
+//command is guarnteed by design to finish in 10ms. 
+//
+void set_property(uint16_t property, uint16_t property_value){
+
+    si4734_wr_buf[0] = SET_PROPERTY;                   //set property command
+ 8ca:	e0 e9       	ldi	r30, 0x90	; 144
+ 8cc:	f2 e0       	ldi	r31, 0x02	; 2
+ 8ce:	22 e1       	ldi	r18, 0x12	; 18
+ 8d0:	20 83       	st	Z, r18
+    si4734_wr_buf[1] = 0x00;                           //all zeros
+ 8d2:	11 82       	std	Z+1, r1	; 0x01
+    si4734_wr_buf[2] = (uint8_t)(property >> 8);       //property high byte
+ 8d4:	92 83       	std	Z+2, r25	; 0x02
+    si4734_wr_buf[3] = (uint8_t)(property);            //property low byte
+ 8d6:	83 83       	std	Z+3, r24	; 0x03
+    si4734_wr_buf[4] = (uint8_t)(property_value >> 8); //property value high byte
+ 8d8:	74 83       	std	Z+4, r23	; 0x04
+    si4734_wr_buf[5] = (uint8_t)(property_value);      //property value low byte
+ 8da:	65 83       	std	Z+5, r22	; 0x05
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 6);
+ 8dc:	46 e0       	ldi	r20, 0x06	; 6
+ 8de:	bf 01       	movw	r22, r30
+ 8e0:	82 e2       	ldi	r24, 0x22	; 34
+ 8e2:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 8e6:	8f e3       	ldi	r24, 0x3F	; 63
+ 8e8:	9c e9       	ldi	r25, 0x9C	; 156
+ 8ea:	01 97       	sbiw	r24, 0x01	; 1
+ 8ec:	f1 f7       	brne	.-4      	; 0x8ea <set_property+0x20>
+ 8ee:	00 c0       	rjmp	.+0      	; 0x8f0 <set_property+0x26>
+ 8f0:	00 00       	nop
+ 8f2:	08 95       	ret
+
+000008f4 <fm_pwr_up>:
+//********************************************************************************
+//                            fm_pwr_up()
+//
+void fm_pwr_up(){
+//restore the previous fm frequency  
+ current_fm_freq = eeprom_read_word(&eeprom_fm_freq); //TODO: only this one does not work 
+ 8f4:	8b e2       	ldi	r24, 0x2B	; 43
+ 8f6:	92 e0       	ldi	r25, 0x02	; 2
+ 8f8:	0e 94 46 07 	call	0xe8c	; 0xe8c <eeprom_read_word>
+ 8fc:	90 93 0c 01 	sts	0x010C, r25
+ 900:	80 93 0b 01 	sts	0x010B, r24
+ current_volume  = eeprom_read_byte(&eeprom_volume); //TODO: only this one does not work 
+ 904:	8a e2       	ldi	r24, 0x2A	; 42
+ 906:	92 e0       	ldi	r25, 0x02	; 2
+ 908:	0e 94 3e 07 	call	0xe7c	; 0xe7c <eeprom_read_byte>
+ 90c:	80 93 57 02 	sts	0x0257, r24
+
+//send fm power up command
+  si4734_wr_buf[0] = FM_PWR_UP; //powerup command byte
+ 910:	e0 e9       	ldi	r30, 0x90	; 144
+ 912:	f2 e0       	ldi	r31, 0x02	; 2
+ 914:	81 e0       	ldi	r24, 0x01	; 1
+ 916:	80 83       	st	Z, r24
+  si4734_wr_buf[1] = 0x50;      //GPO2O enabled, STCINT enabled, use ext. 32khz osc.
+ 918:	80 e5       	ldi	r24, 0x50	; 80
+ 91a:	81 83       	std	Z+1, r24	; 0x01
+  si4734_wr_buf[2] = 0x05;      //OPMODE = 0x05; analog audio output
+ 91c:	85 e0       	ldi	r24, 0x05	; 5
+ 91e:	82 83       	std	Z+2, r24	; 0x02
+  twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 3);
+ 920:	43 e0       	ldi	r20, 0x03	; 3
+ 922:	bf 01       	movw	r22, r30
+ 924:	82 e2       	ldi	r24, 0x22	; 34
+ 926:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+ 92a:	2f ef       	ldi	r18, 0xFF	; 255
+ 92c:	8b ed       	ldi	r24, 0xDB	; 219
+ 92e:	95 e0       	ldi	r25, 0x05	; 5
+ 930:	21 50       	subi	r18, 0x01	; 1
+ 932:	80 40       	sbci	r24, 0x00	; 0
+ 934:	90 40       	sbci	r25, 0x00	; 0
+ 936:	e1 f7       	brne	.-8      	; 0x930 <fm_pwr_up+0x3c>
+ 938:	00 c0       	rjmp	.+0      	; 0x93a <fm_pwr_up+0x46>
+ 93a:	00 00       	nop
+  _delay_ms(120);               //startup delay as specified 
+  //The seek/tune interrupt is enabled here. If the STCINT bit is set, a 1.5us
+  //low pulse will be output from GPIO2/INT when tune or seek is completed.
+  set_property(GPO_IEN, GPO_IEN_STCIEN); //seek_tune complete interrupt
+ 93c:	61 e0       	ldi	r22, 0x01	; 1
+ 93e:	70 e0       	ldi	r23, 0x00	; 0
+ 940:	81 e0       	ldi	r24, 0x01	; 1
+ 942:	90 e0       	ldi	r25, 0x00	; 0
+ 944:	0c 94 65 04 	jmp	0x8ca	; 0x8ca <set_property>
+
+00000948 <am_pwr_up>:
+//********************************************************************************
+//                            am_pwr_up()
+//
+void am_pwr_up(){
+//restore the previous am frequency  
+  current_am_freq = eeprom_read_word(&eeprom_am_freq);
+ 948:	85 e5       	ldi	r24, 0x55	; 85
+ 94a:	92 e0       	ldi	r25, 0x02	; 2
+ 94c:	0e 94 46 07 	call	0xe8c	; 0xe8c <eeprom_read_word>
+ 950:	90 93 59 02 	sts	0x0259, r25
+ 954:	80 93 58 02 	sts	0x0258, r24
+  current_volume  = eeprom_read_byte(&eeprom_volume); //TODO: only this one does not work 
+ 958:	8a e2       	ldi	r24, 0x2A	; 42
+ 95a:	92 e0       	ldi	r25, 0x02	; 2
+ 95c:	0e 94 3e 07 	call	0xe7c	; 0xe7c <eeprom_read_byte>
+ 960:	80 93 57 02 	sts	0x0257, r24
+
+//send am power up command
+  si4734_wr_buf[0] = AM_PWR_UP;
+ 964:	e0 e9       	ldi	r30, 0x90	; 144
+ 966:	f2 e0       	ldi	r31, 0x02	; 2
+ 968:	81 e0       	ldi	r24, 0x01	; 1
+ 96a:	80 83       	st	Z, r24
+  si4734_wr_buf[1] = 0x51;//GPO2OEN and XOSCEN selected
+ 96c:	81 e5       	ldi	r24, 0x51	; 81
+ 96e:	81 83       	std	Z+1, r24	; 0x01
+  si4734_wr_buf[2] = 0x05;
+ 970:	85 e0       	ldi	r24, 0x05	; 5
+ 972:	82 83       	std	Z+2, r24	; 0x02
+  twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 3);
+ 974:	43 e0       	ldi	r20, 0x03	; 3
+ 976:	bf 01       	movw	r22, r30
+ 978:	82 e2       	ldi	r24, 0x22	; 34
+ 97a:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+ 97e:	2f ef       	ldi	r18, 0xFF	; 255
+ 980:	8b ed       	ldi	r24, 0xDB	; 219
+ 982:	95 e0       	ldi	r25, 0x05	; 5
+ 984:	21 50       	subi	r18, 0x01	; 1
+ 986:	80 40       	sbci	r24, 0x00	; 0
+ 988:	90 40       	sbci	r25, 0x00	; 0
+ 98a:	e1 f7       	brne	.-8      	; 0x984 <am_pwr_up+0x3c>
+ 98c:	00 c0       	rjmp	.+0      	; 0x98e <am_pwr_up+0x46>
+ 98e:	00 00       	nop
+  _delay_ms(120);   
+  set_property(GPO_IEN, GPO_IEN_STCIEN);    //Seek/Tune Complete interrupt
+ 990:	61 e0       	ldi	r22, 0x01	; 1
+ 992:	70 e0       	ldi	r23, 0x00	; 0
+ 994:	81 e0       	ldi	r24, 0x01	; 1
+ 996:	90 e0       	ldi	r25, 0x00	; 0
+ 998:	0c 94 65 04 	jmp	0x8ca	; 0x8ca <set_property>
+
+0000099c <sw_pwr_up>:
+//                            sw_pwr_up()
+//
+
+void sw_pwr_up(){
+//restore the previous sw frequency  
+  current_sw_freq = eeprom_read_word(&eeprom_sw_freq);
+ 99c:	84 e8       	ldi	r24, 0x84	; 132
+ 99e:	92 e0       	ldi	r25, 0x02	; 2
+ 9a0:	0e 94 46 07 	call	0xe8c	; 0xe8c <eeprom_read_word>
+ 9a4:	90 93 83 02 	sts	0x0283, r25
+ 9a8:	80 93 82 02 	sts	0x0282, r24
+  current_volume  = eeprom_read_byte(&eeprom_volume); //TODO: only this one does not work 
+ 9ac:	8a e2       	ldi	r24, 0x2A	; 42
+ 9ae:	92 e0       	ldi	r25, 0x02	; 2
+ 9b0:	0e 94 3e 07 	call	0xe7c	; 0xe7c <eeprom_read_byte>
+ 9b4:	80 93 57 02 	sts	0x0257, r24
+
+//send sw power up command (same as am, only tuning rate is different)
+    si4734_wr_buf[0] = AM_PWR_UP; //same cmd as for AM
+ 9b8:	e0 e9       	ldi	r30, 0x90	; 144
+ 9ba:	f2 e0       	ldi	r31, 0x02	; 2
+ 9bc:	81 e0       	ldi	r24, 0x01	; 1
+ 9be:	80 83       	st	Z, r24
+    si4734_wr_buf[1] = 0x51;
+ 9c0:	81 e5       	ldi	r24, 0x51	; 81
+ 9c2:	81 83       	std	Z+1, r24	; 0x01
+    si4734_wr_buf[2] = 0x05;
+ 9c4:	85 e0       	ldi	r24, 0x05	; 5
+ 9c6:	82 83       	std	Z+2, r24	; 0x02
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 3);
+ 9c8:	43 e0       	ldi	r20, 0x03	; 3
+ 9ca:	bf 01       	movw	r22, r30
+ 9cc:	82 e2       	ldi	r24, 0x22	; 34
+ 9ce:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+ 9d2:	2f ef       	ldi	r18, 0xFF	; 255
+ 9d4:	8b ed       	ldi	r24, 0xDB	; 219
+ 9d6:	95 e0       	ldi	r25, 0x05	; 5
+ 9d8:	21 50       	subi	r18, 0x01	; 1
+ 9da:	80 40       	sbci	r24, 0x00	; 0
+ 9dc:	90 40       	sbci	r25, 0x00	; 0
+ 9de:	e1 f7       	brne	.-8      	; 0x9d8 <sw_pwr_up+0x3c>
+ 9e0:	00 c0       	rjmp	.+0      	; 0x9e2 <sw_pwr_up+0x46>
+ 9e2:	00 00       	nop
+    _delay_ms(120);   //start up delay
+
+  //set property to disable soft muting for shortwave broadcasts
+  set_property(AM_SOFT_MUTE_MAX_ATTENUATION, 0x0000); //cut off soft mute  
+ 9e4:	60 e0       	ldi	r22, 0x00	; 0
+ 9e6:	70 e0       	ldi	r23, 0x00	; 0
+ 9e8:	82 e0       	ldi	r24, 0x02	; 2
+ 9ea:	93 e3       	ldi	r25, 0x33	; 51
+ 9ec:	0e 94 65 04 	call	0x8ca	; 0x8ca <set_property>
+  //select 4khz filter BW and engage power line filter
+  set_property(AM_CHANNEL_FILTER, (AM_CHFILT_4KHZ | AM_PWR_LINE_NOISE_REJT_FILTER)); 
+ 9f0:	61 e0       	ldi	r22, 0x01	; 1
+ 9f2:	71 e0       	ldi	r23, 0x01	; 1
+ 9f4:	82 e0       	ldi	r24, 0x02	; 2
+ 9f6:	91 e3       	ldi	r25, 0x31	; 49
+ 9f8:	0e 94 65 04 	call	0x8ca	; 0x8ca <set_property>
+  set_property(GPO_IEN, GPO_IEN_STCIEN); //Seek/Tune Complete interrupt
+ 9fc:	61 e0       	ldi	r22, 0x01	; 1
+ 9fe:	70 e0       	ldi	r23, 0x00	; 0
+ a00:	81 e0       	ldi	r24, 0x01	; 1
+ a02:	90 e0       	ldi	r25, 0x00	; 0
+ a04:	0c 94 65 04 	jmp	0x8ca	; 0x8ca <set_property>
+
+00000a08 <get_rev>:
+//TODO: UNTESTED!
+//Report the chip revision info via uart1. UART1 be setup and connected to 
+//a dumb terminal. e.g.: screen /dev/cu.usbserial-A800fh27 9600
+//
+void get_rev(){
+    si4734_wr_buf[0] = GET_REV;                   //get rev command 
+ a08:	80 e1       	ldi	r24, 0x10	; 16
+ a0a:	80 93 90 02 	sts	0x0290, r24
+    twi_start_wr(SI4734_ADDRESS, si4734_wr_buf, 1);
+ a0e:	41 e0       	ldi	r20, 0x01	; 1
+ a10:	60 e9       	ldi	r22, 0x90	; 144
+ a12:	72 e0       	ldi	r23, 0x02	; 2
+ a14:	82 e2       	ldi	r24, 0x22	; 34
+ a16:	0e 94 18 03 	call	0x630	; 0x630 <twi_start_wr>
+    while( twi_busy() ){}; //spin till TWI read transaction finshes
+ a1a:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ a1e:	81 11       	cpse	r24, r1
+ a20:	fc cf       	rjmp	.-8      	; 0xa1a <get_rev+0x12>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ a22:	8f ea       	ldi	r24, 0xAF	; 175
+ a24:	94 e0       	ldi	r25, 0x04	; 4
+ a26:	01 97       	sbiw	r24, 0x01	; 1
+ a28:	f1 f7       	brne	.-4      	; 0xa26 <get_rev+0x1e>
+ a2a:	00 c0       	rjmp	.+0      	; 0xa2c <get_rev+0x24>
+ a2c:	00 00       	nop
+    _delay_us(300);        //wait for processing delay
+//get the revision info  
+    twi_start_rd(SI4734_ADDRESS, si4734_revision_buf, 8);
+ a2e:	48 e0       	ldi	r20, 0x08	; 8
+ a30:	61 ea       	ldi	r22, 0xA1	; 161
+ a32:	72 e0       	ldi	r23, 0x02	; 2
+ a34:	82 e2       	ldi	r24, 0x22	; 34
+ a36:	0e 94 29 03 	call	0x652	; 0x652 <twi_start_rd>
+    while( twi_busy() ){}; //spin till TWI read transaction finshes
+ a3a:	0e 94 14 03 	call	0x628	; 0x628 <twi_busy>
+ a3e:	81 11       	cpse	r24, r1
+ a40:	fc cf       	rjmp	.-8      	; 0xa3a <get_rev+0x32>
+//use TABs instead?
+    uart1_puts("Si4734 Rev:  last 2 digits of part no.   chip rev     \n\r");
+ a42:	82 e1       	ldi	r24, 0x12	; 18
+ a44:	91 e0       	ldi	r25, 0x01	; 1
+ a46:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+    uart1_puts("             -------------------------   --------     \n\r");
+ a4a:	8b e4       	ldi	r24, 0x4B	; 75
+ a4c:	91 e0       	ldi	r25, 0x01	; 1
+ a4e:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+    uart1_puts("                          "); itoa((int)si4734_revision_buf[1], uart1_tx_buf, 10); uart1_puts(uart1_tx_buf); 
+ a52:	84 e8       	ldi	r24, 0x84	; 132
+ a54:	91 e0       	ldi	r25, 0x01	; 1
+ a56:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ a5a:	80 91 a2 02 	lds	r24, 0x02A2
+    } else if (__radix < 2 || __radix > 36) {
+	*__s = 0;
+	return __s;
+    } else {
+	extern char *__itoa_ncheck (int, char *, unsigned char);
+	return __itoa_ncheck (__val, __s, __radix);
+ a5e:	4a e0       	ldi	r20, 0x0A	; 10
+ a60:	6d e2       	ldi	r22, 0x2D	; 45
+ a62:	72 e0       	ldi	r23, 0x02	; 2
+ a64:	90 e0       	ldi	r25, 0x00	; 0
+ a66:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ a6a:	8d e2       	ldi	r24, 0x2D	; 45
+ a6c:	92 e0       	ldi	r25, 0x02	; 2
+ a6e:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+    uart1_puts("             "); itoa((int)si4734_revision_buf[2], uart1_tx_buf, 10); uart1_puts(uart1_tx_buf); uart1_puts("\n\r");
+ a72:	81 e9       	ldi	r24, 0x91	; 145
+ a74:	91 e0       	ldi	r25, 0x01	; 1
+ a76:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ a7a:	80 91 a3 02 	lds	r24, 0x02A3
+ a7e:	4a e0       	ldi	r20, 0x0A	; 10
+ a80:	6d e2       	ldi	r22, 0x2D	; 45
+ a82:	72 e0       	ldi	r23, 0x02	; 2
+ a84:	90 e0       	ldi	r25, 0x00	; 0
+ a86:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ a8a:	8d e2       	ldi	r24, 0x2D	; 45
+ a8c:	92 e0       	ldi	r25, 0x02	; 2
+ a8e:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ a92:	81 e8       	ldi	r24, 0x81	; 129
+ a94:	91 e0       	ldi	r25, 0x01	; 1
+ a96:	0c 94 06 06 	jmp	0xc0c	; 0xc0c <uart1_puts>
+
+00000a9a <get_fm_rsq_status>:
+// TODO: UNTESTED!
+//Report the fm rsq status via uart1. Requires that UART1 be setup and connected to 
+//a terminal. e.g.: screen /dev/cu.usbserial-A800fh27 9600
+//Also requires that a fm_tune_status has been previously called.
+
+void get_fm_rsq_status(){
+ a9a:	ff 92       	push	r15
+ a9c:	0f 93       	push	r16
+ a9e:	1f 93       	push	r17
+ aa0:	cf 93       	push	r28
+ aa2:	df 93       	push	r29
+ aa4:	cd b7       	in	r28, 0x3d	; 61
+ aa6:	de b7       	in	r29, 0x3e	; 62
+ aa8:	a8 97       	sbiw	r28, 0x28	; 40
+ aaa:	0f b6       	in	r0, 0x3f	; 63
+ aac:	f8 94       	cli
+ aae:	de bf       	out	0x3e, r29	; 62
+ ab0:	0f be       	out	0x3f, r0	; 63
+ ab2:	cd bf       	out	0x3d, r28	; 61
+  uint8_t disp_freq;  //temp holding variable
+  char    str[40];    //temp for building strings
+
+  uart1_puts("FM_RSQ_STATUS: ");
+ ab4:	8f e9       	ldi	r24, 0x9F	; 159
+ ab6:	91 e0       	ldi	r25, 0x01	; 1
+ ab8:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+  uart1_puts("status byte   :");   itoa((int)si4734_tune_status_buf[0], uart1_tx_buf, 16);   uart1_puts(uart1_tx_buf); uart1_puts("\n\r");
+ abc:	8f ea       	ldi	r24, 0xAF	; 175
+ abe:	91 e0       	ldi	r25, 0x01	; 1
+ ac0:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ ac4:	09 e9       	ldi	r16, 0x99	; 153
+ ac6:	12 e0       	ldi	r17, 0x02	; 2
+ ac8:	f8 01       	movw	r30, r16
+ aca:	80 81       	ld	r24, Z
+ acc:	40 e1       	ldi	r20, 0x10	; 16
+ ace:	6d e2       	ldi	r22, 0x2D	; 45
+ ad0:	72 e0       	ldi	r23, 0x02	; 2
+ ad2:	90 e0       	ldi	r25, 0x00	; 0
+ ad4:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ ad8:	8d e2       	ldi	r24, 0x2D	; 45
+ ada:	92 e0       	ldi	r25, 0x02	; 2
+ adc:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ ae0:	81 e8       	ldi	r24, 0x81	; 129
+ ae2:	91 e0       	ldi	r25, 0x01	; 1
+ ae4:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+  uart1_puts("resp1         :");   itoa((int)si4734_tune_status_buf[1], uart1_tx_buf, 10);   uart1_puts(uart1_tx_buf); uart1_puts("\n\r");
+ ae8:	8f eb       	ldi	r24, 0xBF	; 191
+ aea:	91 e0       	ldi	r25, 0x01	; 1
+ aec:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ af0:	f8 01       	movw	r30, r16
+ af2:	81 81       	ldd	r24, Z+1	; 0x01
+ af4:	4a e0       	ldi	r20, 0x0A	; 10
+ af6:	6d e2       	ldi	r22, 0x2D	; 45
+ af8:	72 e0       	ldi	r23, 0x02	; 2
+ afa:	90 e0       	ldi	r25, 0x00	; 0
+ afc:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ b00:	8d e2       	ldi	r24, 0x2D	; 45
+ b02:	92 e0       	ldi	r25, 0x02	; 2
+ b04:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b08:	81 e8       	ldi	r24, 0x81	; 129
+ b0a:	91 e0       	ldi	r25, 0x01	; 1
+ b0c:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+  disp_freq = si4734_tune_status_buf[2];      //load high frequency byte
+  disp_freq = (disp_freq << 8); //shift upper byte to upper 8 bits
+  disp_freq |= si4734_tune_status_buf[3];     //load low high frequency byte
+ b10:	f8 01       	movw	r30, r16
+ b12:	f3 80       	ldd	r15, Z+3	; 0x03
+  uart1_puts("freq          :");   itoa(disp_freq, uart1_tx_buf, 10);   uart1_puts(uart1_tx_buf); uart1_puts("\n\r");
+ b14:	8f ec       	ldi	r24, 0xCF	; 207
+ b16:	91 e0       	ldi	r25, 0x01	; 1
+ b18:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b1c:	4a e0       	ldi	r20, 0x0A	; 10
+ b1e:	6d e2       	ldi	r22, 0x2D	; 45
+ b20:	72 e0       	ldi	r23, 0x02	; 2
+ b22:	8f 2d       	mov	r24, r15
+ b24:	90 e0       	ldi	r25, 0x00	; 0
+ b26:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ b2a:	8d e2       	ldi	r24, 0x2D	; 45
+ b2c:	92 e0       	ldi	r25, 0x02	; 2
+ b2e:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b32:	81 e8       	ldi	r24, 0x81	; 129
+ b34:	91 e0       	ldi	r25, 0x01	; 1
+ b36:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+  uart1_puts("freq high     :");   itoa((int)si4734_tune_status_buf[2], str, 16);   uart1_puts(str); uart1_puts("\n\r");
+ b3a:	8f ed       	ldi	r24, 0xDF	; 223
+ b3c:	91 e0       	ldi	r25, 0x01	; 1
+ b3e:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b42:	f8 01       	movw	r30, r16
+ b44:	82 81       	ldd	r24, Z+2	; 0x02
+ b46:	40 e1       	ldi	r20, 0x10	; 16
+ b48:	be 01       	movw	r22, r28
+ b4a:	6f 5f       	subi	r22, 0xFF	; 255
+ b4c:	7f 4f       	sbci	r23, 0xFF	; 255
+ b4e:	90 e0       	ldi	r25, 0x00	; 0
+ b50:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ b54:	ce 01       	movw	r24, r28
+ b56:	01 96       	adiw	r24, 0x01	; 1
+ b58:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b5c:	81 e8       	ldi	r24, 0x81	; 129
+ b5e:	91 e0       	ldi	r25, 0x01	; 1
+ b60:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+  uart1_puts("freq low      :");   itoa((int)si4734_tune_status_buf[3], str, 16);   uart1_puts(str); uart1_puts("\n\r");
+ b64:	8f ee       	ldi	r24, 0xEF	; 239
+ b66:	91 e0       	ldi	r25, 0x01	; 1
+ b68:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b6c:	f8 01       	movw	r30, r16
+ b6e:	83 81       	ldd	r24, Z+3	; 0x03
+ b70:	40 e1       	ldi	r20, 0x10	; 16
+ b72:	be 01       	movw	r22, r28
+ b74:	6f 5f       	subi	r22, 0xFF	; 255
+ b76:	7f 4f       	sbci	r23, 0xFF	; 255
+ b78:	90 e0       	ldi	r25, 0x00	; 0
+ b7a:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ b7e:	ce 01       	movw	r24, r28
+ b80:	01 96       	adiw	r24, 0x01	; 1
+ b82:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b86:	81 e8       	ldi	r24, 0x81	; 129
+ b88:	91 e0       	ldi	r25, 0x01	; 1
+ b8a:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+  uart1_puts("rssi          :");   itoa((int)si4734_tune_status_buf[4], uart1_tx_buf, 16);   uart1_puts(uart1_tx_buf); uart1_puts("\n\r");
+ b8e:	8f ef       	ldi	r24, 0xFF	; 255
+ b90:	91 e0       	ldi	r25, 0x01	; 1
+ b92:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ b96:	f8 01       	movw	r30, r16
+ b98:	84 81       	ldd	r24, Z+4	; 0x04
+ b9a:	40 e1       	ldi	r20, 0x10	; 16
+ b9c:	6d e2       	ldi	r22, 0x2D	; 45
+ b9e:	72 e0       	ldi	r23, 0x02	; 2
+ ba0:	90 e0       	ldi	r25, 0x00	; 0
+ ba2:	0e 94 09 07 	call	0xe12	; 0xe12 <__itoa_ncheck>
+ ba6:	8d e2       	ldi	r24, 0x2D	; 45
+ ba8:	92 e0       	ldi	r25, 0x02	; 2
+ baa:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+ bae:	81 e8       	ldi	r24, 0x81	; 129
+ bb0:	91 e0       	ldi	r25, 0x01	; 1
+ bb2:	0e 94 06 06 	call	0xc0c	; 0xc0c <uart1_puts>
+}
+ bb6:	a8 96       	adiw	r28, 0x28	; 40
+ bb8:	0f b6       	in	r0, 0x3f	; 63
+ bba:	f8 94       	cli
+ bbc:	de bf       	out	0x3e, r29	; 62
+ bbe:	0f be       	out	0x3f, r0	; 63
+ bc0:	cd bf       	out	0x3d, r28	; 61
+ bc2:	df 91       	pop	r29
+ bc4:	cf 91       	pop	r28
+ bc6:	1f 91       	pop	r17
+ bc8:	0f 91       	pop	r16
+ bca:	ff 90       	pop	r15
+ bcc:	08 95       	ret
+
+00000bce <uart_putc>:
+//                        uart_putc
+//
+// Takes a character and sends it to USART0
+//
+void uart_putc(char data) {
+    while (!(UCSR0A&(1<<UDRE0)));    // Wait for previous transmissions
+ bce:	5d 9b       	sbis	0x0b, 5	; 11
+ bd0:	fe cf       	rjmp	.-4      	; 0xbce <uart_putc>
+    UDR0 = data;    // Send data byte
+ bd2:	8c b9       	out	0x0c, r24	; 12
+    while (!(UCSR0A&(1<<UDRE0)));    // Wait for previous transmissions
+ bd4:	5d 9b       	sbis	0x0b, 5	; 11
+ bd6:	fe cf       	rjmp	.-4      	; 0xbd4 <uart_putc+0x6>
+}
+ bd8:	08 95       	ret
+
+00000bda <uart1_putc>:
+//                        uart1_putc
+//
+// Takes a character and sends it to USART1
+//
+void uart1_putc(char data) {
+    while (!(UCSR1A&(1<<UDRE1)));    // Wait for previous transmissions
+ bda:	90 91 9b 00 	lds	r25, 0x009B
+ bde:	95 ff       	sbrs	r25, 5
+ be0:	fc cf       	rjmp	.-8      	; 0xbda <uart1_putc>
+    UDR1 = data;    // Send data byte
+ be2:	80 93 9c 00 	sts	0x009C, r24
+    while (!(UCSR1A&(1<<UDRE1)));    // Wait for previous transmissions
+ be6:	80 91 9b 00 	lds	r24, 0x009B
+ bea:	85 ff       	sbrs	r24, 5
+ bec:	fc cf       	rjmp	.-8      	; 0xbe6 <uart1_putc+0xc>
+}
+ bee:	08 95       	ret
+
+00000bf0 <uart_puts>:
+
+//******************************************************************
+//                        uart_puts
+// Takes a string and sends each charater to be sent to USART0
+//void uart_puts(unsigned char *str) {
+void uart_puts(char *str) {
+ bf0:	fc 01       	movw	r30, r24
+    int i = 0;               
+    // Loop through string, sending each character
+    while(str[i] != '\0') { 
+ bf2:	90 81       	ld	r25, Z
+ bf4:	99 23       	and	r25, r25
+ bf6:	49 f0       	breq	.+18     	; 0xc0a <uart_puts+0x1a>
+ bf8:	31 96       	adiw	r30, 0x01	; 1
+//                        uart_putc
+//
+// Takes a character and sends it to USART0
+//
+void uart_putc(char data) {
+    while (!(UCSR0A&(1<<UDRE0)));    // Wait for previous transmissions
+ bfa:	5d 9b       	sbis	0x0b, 5	; 11
+ bfc:	fe cf       	rjmp	.-4      	; 0xbfa <uart_puts+0xa>
+    UDR0 = data;    // Send data byte
+ bfe:	9c b9       	out	0x0c, r25	; 12
+    while (!(UCSR0A&(1<<UDRE0)));    // Wait for previous transmissions
+ c00:	5d 9b       	sbis	0x0b, 5	; 11
+ c02:	fe cf       	rjmp	.-4      	; 0xc00 <uart_puts+0x10>
+// Takes a string and sends each charater to be sent to USART0
+//void uart_puts(unsigned char *str) {
+void uart_puts(char *str) {
+    int i = 0;               
+    // Loop through string, sending each character
+    while(str[i] != '\0') { 
+ c04:	91 91       	ld	r25, Z+
+ c06:	91 11       	cpse	r25, r1
+ c08:	f8 cf       	rjmp	.-16     	; 0xbfa <uart_puts+0xa>
+ c0a:	08 95       	ret
+
+00000c0c <uart1_puts>:
+// Takes a string and sends each charater to be sent to USART0
+//void uart_puts(unsigned char *str) {
+void uart1_puts(char *str) {
+    int i = 0;               
+    // Loop through string, sending each character
+    while(str[i] != '\0') { 
+ c0c:	fc 01       	movw	r30, r24
+ c0e:	20 81       	ld	r18, Z
+ c10:	22 23       	and	r18, r18
+ c12:	71 f0       	breq	.+28     	; 0xc30 <uart1_puts+0x24>
+ c14:	31 96       	adiw	r30, 0x01	; 1
+//                        uart1_putc
+//
+// Takes a character and sends it to USART1
+//
+void uart1_putc(char data) {
+    while (!(UCSR1A&(1<<UDRE1)));    // Wait for previous transmissions
+ c16:	90 91 9b 00 	lds	r25, 0x009B
+ c1a:	95 ff       	sbrs	r25, 5
+ c1c:	fc cf       	rjmp	.-8      	; 0xc16 <uart1_puts+0xa>
+    UDR1 = data;    // Send data byte
+ c1e:	20 93 9c 00 	sts	0x009C, r18
+    while (!(UCSR1A&(1<<UDRE1)));    // Wait for previous transmissions
+ c22:	90 91 9b 00 	lds	r25, 0x009B
+ c26:	95 ff       	sbrs	r25, 5
+ c28:	fc cf       	rjmp	.-8      	; 0xc22 <uart1_puts+0x16>
+// Takes a string and sends each charater to be sent to USART0
+//void uart_puts(unsigned char *str) {
+void uart1_puts(char *str) {
+    int i = 0;               
+    // Loop through string, sending each character
+    while(str[i] != '\0') { 
+ c2a:	21 91       	ld	r18, Z+
+ c2c:	21 11       	cpse	r18, r1
+ c2e:	f3 cf       	rjmp	.-26     	; 0xc16 <uart1_puts+0xa>
+ c30:	08 95       	ret
+
+00000c32 <uart_puts_p>:
+//                        uart_puts_p
+// Takes a string in flash memory and sends each charater to USART0
+//void uart_puts(unsigned char *str) {
+void uart_puts_p(const char *str) {      
+    // Loop through string, sending each character
+    while(pgm_read_byte(str) != 0x00) { 
+ c32:	9c 01       	movw	r18, r24
+ c34:	fc 01       	movw	r30, r24
+ c36:	44 91       	lpm	r20, Z
+ c38:	44 23       	and	r20, r20
+ c3a:	69 f0       	breq	.+26     	; 0xc56 <uart_puts_p+0x24>
+        uart_putc(pgm_read_byte(str++));
+ c3c:	01 96       	adiw	r24, 0x01	; 1
+ c3e:	f9 01       	movw	r30, r18
+ c40:	24 91       	lpm	r18, Z
+//                        uart_putc
+//
+// Takes a character and sends it to USART0
+//
+void uart_putc(char data) {
+    while (!(UCSR0A&(1<<UDRE0)));    // Wait for previous transmissions
+ c42:	5d 9b       	sbis	0x0b, 5	; 11
+ c44:	fe cf       	rjmp	.-4      	; 0xc42 <uart_puts_p+0x10>
+    UDR0 = data;    // Send data byte
+ c46:	2c b9       	out	0x0c, r18	; 12
+    while (!(UCSR0A&(1<<UDRE0)));    // Wait for previous transmissions
+ c48:	5d 9b       	sbis	0x0b, 5	; 11
+ c4a:	fe cf       	rjmp	.-4      	; 0xc48 <uart_puts_p+0x16>
+//                        uart_puts_p
+// Takes a string in flash memory and sends each charater to USART0
+//void uart_puts(unsigned char *str) {
+void uart_puts_p(const char *str) {      
+    // Loop through string, sending each character
+    while(pgm_read_byte(str) != 0x00) { 
+ c4c:	9c 01       	movw	r18, r24
+ c4e:	fc 01       	movw	r30, r24
+ c50:	44 91       	lpm	r20, Z
+ c52:	41 11       	cpse	r20, r1
+ c54:	f3 cf       	rjmp	.-26     	; 0xc3c <uart_puts_p+0xa>
+        uart_putc(pgm_read_byte(str++));
+    }
+}
+ c56:	08 95       	ret
+
+00000c58 <uart_init>:
+//Jumpers J14 and J16 (mega128.1) or Jumpers J7 and J9 (mega128.2)
+//must be in place for the MAX232 chip to get data.
+
+void uart_init(){
+//rx and tx enable, receive interrupt enabled, 8 bit characters
+UCSR0B |= (1<<RXEN0) | (1<<TXEN0) | (1<<RXCIE0); //INTERRUPTS ENABLED
+ c58:	8a b1       	in	r24, 0x0a	; 10
+ c5a:	88 69       	ori	r24, 0x98	; 152
+ c5c:	8a b9       	out	0x0a, r24	; 10
+//  UCSR0B |= (1<<RXEN0) | (1<<TXEN0);               //INTERRUPS DISABLED
+
+//async operation, no parity,  one stop bit, 8-bit characters
+  UCSR0C |= (1<<UCSZ01) | (1<<UCSZ00);
+ c5e:	e5 e9       	ldi	r30, 0x95	; 149
+ c60:	f0 e0       	ldi	r31, 0x00	; 0
+ c62:	80 81       	ld	r24, Z
+ c64:	86 60       	ori	r24, 0x06	; 6
+ c66:	80 83       	st	Z, r24
+  UBRR0H = (BAUDVALUE >>8 ); //load upper byte of the baud rate into UBRR 
+ c68:	10 92 90 00 	sts	0x0090, r1
+  UBRR0L =  BAUDVALUE;       //load lower byte of the baud rate into UBRR 
+ c6c:	87 e6       	ldi	r24, 0x67	; 103
+ c6e:	89 b9       	out	0x09, r24	; 9
+ c70:	08 95       	ret
+
+00000c72 <uart1_init>:
+//must be in place for the MAX232 chip to get data.
+
+void uart1_init(){
+//rx and tx enable, receive interrupt enabled, 8 bit characters
+//UCSR1B |= (1<<RXEN1) | (1<<TXEN1) | (1<<RXCIE1); //INTERRUPTS ENABLED
+  UCSR1B |= (1<<RXEN1) | (1<<TXEN1);               //INTERRUPS DISABLED
+ c72:	ea e9       	ldi	r30, 0x9A	; 154
+ c74:	f0 e0       	ldi	r31, 0x00	; 0
+ c76:	80 81       	ld	r24, Z
+ c78:	88 61       	ori	r24, 0x18	; 24
+ c7a:	80 83       	st	Z, r24
+
+//async operation, no parity,  one stop bit, 8-bit characters
+  UCSR1C |= (1<<UCSZ11) | (1<<UCSZ10);
+ c7c:	ed e9       	ldi	r30, 0x9D	; 157
+ c7e:	f0 e0       	ldi	r31, 0x00	; 0
+ c80:	80 81       	ld	r24, Z
+ c82:	86 60       	ori	r24, 0x06	; 6
+ c84:	80 83       	st	Z, r24
+  UBRR1H = (BAUDVALUE_1 >>8 ); //load upper byte of the baud rate into UBRR 
+ c86:	10 92 98 00 	sts	0x0098, r1
+  UBRR1L =  BAUDVALUE_1;       //load lower byte of the baud rate into UBRR 
+ c8a:	87 e6       	ldi	r24, 0x67	; 103
+ c8c:	80 93 99 00 	sts	0x0099, r24
+ c90:	08 95       	ret
+
+00000c92 <uart_getc>:
+//Modified to not block indefinately in the case of a lost byte
+//
+char uart_getc(void) {
+  uint16_t timer = 0;
+
+  while (!(UCSR0A & (1<<RXC0))) {
+ c92:	80 e8       	ldi	r24, 0x80	; 128
+ c94:	9e e3       	ldi	r25, 0x3E	; 62
+ c96:	02 c0       	rjmp	.+4      	; 0xc9c <uart_getc+0xa>
+ c98:	01 97       	sbiw	r24, 0x01	; 1
+  timer++;
+  if(timer >= 16000){ return(0);}
+ c9a:	21 f0       	breq	.+8      	; 0xca4 <uart_getc+0x12>
+//Modified to not block indefinately in the case of a lost byte
+//
+char uart_getc(void) {
+  uint16_t timer = 0;
+
+  while (!(UCSR0A & (1<<RXC0))) {
+ c9c:	5f 9b       	sbis	0x0b, 7	; 11
+ c9e:	fc cf       	rjmp	.-8      	; 0xc98 <uart_getc+0x6>
+  //what should we return if nothing comes in?
+  //return the data into a global variable
+  //give uart_getc the address of the variable
+  //return a -1 if no data comes back.
+  } // Wait for byte to arrive
+  return(UDR0); //return the received data
+ ca0:	8c b1       	in	r24, 0x0c	; 12
+ ca2:	08 95       	ret
+char uart_getc(void) {
+  uint16_t timer = 0;
+
+  while (!(UCSR0A & (1<<RXC0))) {
+  timer++;
+  if(timer >= 16000){ return(0);}
+ ca4:	80 e0       	ldi	r24, 0x00	; 0
+  //return the data into a global variable
+  //give uart_getc the address of the variable
+  //return a -1 if no data comes back.
+  } // Wait for byte to arrive
+  return(UDR0); //return the received data
+}
+ ca6:	08 95       	ret
+
+00000ca8 <uart1_getc>:
+ ca8:	80 e8       	ldi	r24, 0x80	; 128
+ caa:	9e e3       	ldi	r25, 0x3E	; 62
+ cac:	02 c0       	rjmp	.+4      	; 0xcb2 <uart1_getc+0xa>
+ cae:	01 97       	sbiw	r24, 0x01	; 1
+ cb0:	39 f0       	breq	.+14     	; 0xcc0 <uart1_getc+0x18>
+ cb2:	20 91 9b 00 	lds	r18, 0x009B
+ cb6:	27 ff       	sbrs	r18, 7
+ cb8:	fa cf       	rjmp	.-12     	; 0xcae <uart1_getc+0x6>
+ cba:	80 91 9c 00 	lds	r24, 0x009C
+ cbe:	08 95       	ret
+ cc0:	80 e0       	ldi	r24, 0x00	; 0
+ cc2:	08 95       	ret
+
+00000cc4 <main>:
+
+
+uint8_t main(){
+ cc4:	cf 93       	push	r28
+ cc6:	df 93       	push	r29
+ cc8:	00 d0       	rcall	.+0      	; 0xcca <main+0x6>
+ cca:	00 d0       	rcall	.+0      	; 0xccc <main+0x8>
+ ccc:	1f 92       	push	r1
+ cce:	cd b7       	in	r28, 0x3d	; 61
+ cd0:	de b7       	in	r29, 0x3e	; 62
+init_twi();
+ cd2:	0e 94 3a 03 	call	0x674	; 0x674 <init_twi>
+ uint8_t b = 0;                               //counter for selection logic 
+ uint8_t disp[5] = {0x00,0x10,0x20,0x30,0x40};//slection array
+ cd6:	85 e0       	ldi	r24, 0x05	; 5
+ cd8:	ed e0       	ldi	r30, 0x0D	; 13
+ cda:	f1 e0       	ldi	r31, 0x01	; 1
+ cdc:	de 01       	movw	r26, r28
+ cde:	11 96       	adiw	r26, 0x01	; 1
+ ce0:	01 90       	ld	r0, Z+
+ ce2:	0d 92       	st	X+, r0
+ ce4:	8a 95       	dec	r24
+ ce6:	e1 f7       	brne	.-8      	; 0xce0 <main+0x1c>
+//*********************************************************************
+                                //SPI initialize
+//*********************************************************************
+void spi_init()
+{
+	DDRB = 0xF7;// set ss_n, sck, mosi
+ ce8:	87 ef       	ldi	r24, 0xF7	; 247
+ cea:	87 bb       	out	0x17, r24	; 23
+	SPCR |= (1<<SPE) | (1<<MSTR);// master mode
+ cec:	8d b1       	in	r24, 0x0d	; 13
+ cee:	80 65       	ori	r24, 0x50	; 80
+ cf0:	8d b9       	out	0x0d, r24	; 13
+	SPSR |= (1<<SPI2X);// double speed operation
+ cf2:	70 9a       	sbi	0x0e, 0	; 14
+uint8_t main(){
+init_twi();
+ uint8_t b = 0;                               //counter for selection logic 
+ uint8_t disp[5] = {0x00,0x10,0x20,0x30,0x40};//slection array
+ spi_init(); 
+ TIMSK|=(1<<TOIE0);                           //setting up timer0
+ cf4:	87 b7       	in	r24, 0x37	; 55
+ cf6:	81 60       	ori	r24, 0x01	; 1
+ cf8:	87 bf       	out	0x37, r24	; 55
+ TCCR0|=(1<<CS02) | (1<<CS00);
+ cfa:	83 b7       	in	r24, 0x33	; 51
+ cfc:	85 60       	ori	r24, 0x05	; 5
+ cfe:	83 bf       	out	0x33, r24	; 51
+ DDRE  |= 0x08;
+ d00:	13 9a       	sbi	0x02, 3	; 2
+  TCCR3A |= (1<<COM3A1) | (1<<COM3A0) | (1<<WGM31);//initialize timer3 for vol
+ d02:	80 91 8b 00 	lds	r24, 0x008B
+ d06:	82 6c       	ori	r24, 0xC2	; 194
+ d08:	80 93 8b 00 	sts	0x008B, r24
+  TCCR3B |= (1<<WGM33) | (1<<WGM32) | (1<<CS30);   //control
+ d0c:	80 91 8a 00 	lds	r24, 0x008A
+ d10:	89 61       	ori	r24, 0x19	; 25
+ d12:	80 93 8a 00 	sts	0x008A, r24
+  TCCR3C = 0x00;
+ d16:	10 92 8c 00 	sts	0x008C, r1
+  OCR3A = 0x7000;
+ d1a:	80 e0       	ldi	r24, 0x00	; 0
+ d1c:	90 e7       	ldi	r25, 0x70	; 112
+ d1e:	90 93 87 00 	sts	0x0087, r25
+ d22:	80 93 86 00 	sts	0x0086, r24
+  ICR3 = 0xF000;
+ d26:	80 e0       	ldi	r24, 0x00	; 0
+ d28:	90 ef       	ldi	r25, 0xF0	; 240
+ d2a:	90 93 81 00 	sts	0x0081, r25
+ d2e:	80 93 80 00 	sts	0x0080, r24
+
+        //PORTE |= 0x08;
+	//DDRE  |= 0x08;
+
+	DDRE  |= 0x04; //Port E bit 2 is active high reset for radio 
+ d32:	12 9a       	sbi	0x02, 2	; 2
+	PORTE |= 0x04; //radio reset is on at powerup (active high)
+ d34:	1a 9a       	sbi	0x03, 2	; 3
+
+        EICRB |= (1<<ISC71) | (1<<ISC70);
+ d36:	8a b7       	in	r24, 0x3a	; 58
+ d38:	80 6c       	ori	r24, 0xC0	; 192
+ d3a:	8a bf       	out	0x3a, r24	; 58
+	EIMSK |= (1<<INT7);
+ d3c:	89 b7       	in	r24, 0x39	; 57
+ d3e:	80 68       	ori	r24, 0x80	; 128
+ d40:	89 bf       	out	0x39, r24	; 57
+
+	//hardware reset of Si4734
+	PORTE &= ~(1<<PE7); //int2 initially low to sense TWI mode
+ d42:	1f 98       	cbi	0x03, 7	; 3
+	DDRE  |= 0x80;      //turn on Port E bit 7 to drive it low
+ d44:	17 9a       	sbi	0x02, 7	; 2
+	PORTE |=  (1<<PE2); //hardware reset Si4734 
+ d46:	1a 9a       	sbi	0x03, 2	; 3
+ d48:	8f e1       	ldi	r24, 0x1F	; 31
+ d4a:	93 e0       	ldi	r25, 0x03	; 3
+ d4c:	01 97       	sbiw	r24, 0x01	; 1
+ d4e:	f1 f7       	brne	.-4      	; 0xd4c <main+0x88>
+ d50:	00 c0       	rjmp	.+0      	; 0xd52 <main+0x8e>
+ d52:	00 00       	nop
+	_delay_us(200);     //hold for 200us, 100us by spec         
+	PORTE &= ~(1<<PE2); //release reset 
+ d54:	1a 98       	cbi	0x03, 2	; 3
+ d56:	90 ea       	ldi	r25, 0xA0	; 160
+ d58:	9a 95       	dec	r25
+ d5a:	f1 f7       	brne	.-4      	; 0xd58 <main+0x94>
+	_delay_us(30);      //5us required because of my slow I2C translators I suspect
+	//Si code in "low" has 30us delay...no explaination
+	DDRE  &= ~(0x80);   //now Port E bit 7 becomes input from the radio interrupt
+ d5c:	17 98       	cbi	0x02, 7	; 2
+ sei();
+ d5e:	78 94       	sei
+fm_pwr_up(); //powerup the radio as appropriate
+ d60:	0e 94 7a 04 	call	0x8f4	; 0x8f4 <fm_pwr_up>
+current_fm_freq = 9910; //arg2, arg3: 99.9Mhz, 200khz steps
+ d64:	86 eb       	ldi	r24, 0xB6	; 182
+ d66:	96 e2       	ldi	r25, 0x26	; 38
+ d68:	90 93 0c 01 	sts	0x010C, r25
+ d6c:	80 93 0b 01 	sts	0x010B, r24
+ d70:	8e 01       	movw	r16, r28
+ d72:	0a 5f       	subi	r16, 0xFA	; 250
+ d74:	1f 4f       	sbci	r17, 0xFF	; 255
+while(1){
+  //      fm_pwr_up();
+	encoder();                            //call encoder
+	bargraph();                           //call bargraph
+ 	DDRA = 0x00;                          //set porta to input
+ 	PORTA = 0xFF;                         //port a to pull ups
+ d76:	ff 24       	eor	r15, r15
+ d78:	fa 94       	dec	r15
+current_fm_freq = 9910; //arg2, arg3: 99.9Mhz, 200khz steps
+//fm_tune_freq(); //tune radio to frequency in current_fm_freq
+
+while(1){
+  //      fm_pwr_up();
+	encoder();                            //call encoder
+ d7a:	0e 94 ea 00 	call	0x1d4	; 0x1d4 <encoder>
+//********************************************************************
+                              //bargraph
+//*********************************************************************
+
+ void bargraph(){
+  PORTB |= 0x01; //rising edge to rgclk
+ d7e:	c0 9a       	sbi	0x18, 0	; 24
+  PORTB &= ~0x01;//falling edge to rgclk
+ d80:	c0 98       	cbi	0x18, 0	; 24
+
+while(1){
+  //      fm_pwr_up();
+	encoder();                            //call encoder
+	bargraph();                           //call bargraph
+ 	DDRA = 0x00;                          //set porta to input
+ d82:	1a ba       	out	0x1a, r1	; 26
+ 	PORTA = 0xFF;                         //port a to pull ups
+ d84:	fb ba       	out	0x1b, r15	; 27
+ 	asm("nop");
+ d86:	00 00       	nop
+ 	asm("nop");
+ d88:	00 00       	nop
+//       if(total>1023){                        //bound the count to 1023
+  //        total = 1;}
+    //  else if(total<0){ total = 1023;}
+       
+       // current_fm_freq = total;
+ 	segsum(current_fm_freq);                        //call segsum
+ d8a:	80 91 0b 01 	lds	r24, 0x010B
+ d8e:	90 91 0c 01 	lds	r25, 0x010C
+ d92:	0e 94 c7 01 	call	0x38e	; 0x38e <segsum>
+       if(state == 2)
+ d96:	80 91 14 02 	lds	r24, 0x0214
+ d9a:	82 30       	cpi	r24, 0x02	; 2
+ d9c:	c1 f0       	breq	.+48     	; 0xdce <main+0x10a>
+        //  state = 0;         
+          fm_tune_freq();
+          state = 0;         
+          
+        }
+      if(state == 1)
+ d9e:	81 30       	cpi	r24, 0x01	; 1
+ da0:	d9 f0       	breq	.+54     	; 0xdd8 <main+0x114>
+        {
+         radio_pwr_dwn();
+         fm_pwr_up();
+        }
+ 	DDRA = 0xFF;                          //set porta to output
+ da2:	fa ba       	out	0x1a, r15	; 26
+ 	asm("nop");
+ da4:	00 00       	nop
+ 	asm("nop");
+ da6:	00 00       	nop
+ 	PORTA = 0xFF;                         //porta to pull ups
+ da8:	fb ba       	out	0x1b, r15	; 27
+ daa:	fe 01       	movw	r30, r28
+ dac:	31 96       	adiw	r30, 0x01	; 1
+ dae:	a6 e8       	ldi	r26, 0x86	; 134
+ db0:	b2 e0       	ldi	r27, 0x02	; 2
+
+    	for(b=0;b<5;b++){             
+		PORTB = disp[b];              //selection logic
+ db2:	81 91       	ld	r24, Z+
+ db4:	88 bb       	out	0x18, r24	; 24
+		PORTA = segment_data[b];      //sending data to port a
+ db6:	8d 91       	ld	r24, X+
+ db8:	8b bb       	out	0x1b, r24	; 27
+ dba:	8f e8       	ldi	r24, 0x8F	; 143
+ dbc:	91 e0       	ldi	r25, 0x01	; 1
+ dbe:	01 97       	sbiw	r24, 0x01	; 1
+ dc0:	f1 f7       	brne	.-4      	; 0xdbe <main+0xfa>
+ dc2:	00 c0       	rjmp	.+0      	; 0xdc4 <main+0x100>
+ dc4:	00 00       	nop
+ 	DDRA = 0xFF;                          //set porta to output
+ 	asm("nop");
+ 	asm("nop");
+ 	PORTA = 0xFF;                         //porta to pull ups
+
+    	for(b=0;b<5;b++){             
+ dc6:	e0 17       	cp	r30, r16
+ dc8:	f1 07       	cpc	r31, r17
+ dca:	99 f7       	brne	.-26     	; 0xdb2 <main+0xee>
+ dcc:	d6 cf       	rjmp	.-84     	; 0xd7a <main+0xb6>
+ 	segsum(current_fm_freq);                        //call segsum
+       if(state == 2)
+        {
+          //fm_pwr_up();
+        //  state = 0;         
+          fm_tune_freq();
+ dce:	0e 94 63 03 	call	0x6c6	; 0x6c6 <fm_tune_freq>
+          state = 0;         
+ dd2:	10 92 14 02 	sts	0x0214, r1
+ dd6:	e5 cf       	rjmp	.-54     	; 0xda2 <main+0xde>
+          
+        }
+      if(state == 1)
+        {
+         radio_pwr_dwn();
+ dd8:	0e 94 b1 03 	call	0x762	; 0x762 <radio_pwr_dwn>
+         fm_pwr_up();
+ ddc:	0e 94 7a 04 	call	0x8f4	; 0x8f4 <fm_pwr_up>
+ de0:	e0 cf       	rjmp	.-64     	; 0xda2 <main+0xde>
+
+00000de2 <__tablejump2__>:
+ de2:	ee 0f       	add	r30, r30
+ de4:	ff 1f       	adc	r31, r31
+ de6:	00 24       	eor	r0, r0
+ de8:	00 1c       	adc	r0, r0
+ dea:	0b be       	out	0x3b, r0	; 59
+ dec:	07 90       	elpm	r0, Z+
+ dee:	f6 91       	elpm	r31, Z
+ df0:	e0 2d       	mov	r30, r0
+ df2:	09 94       	ijmp
+
+00000df4 <__umulhisi3>:
+ df4:	a2 9f       	mul	r26, r18
+ df6:	b0 01       	movw	r22, r0
+ df8:	b3 9f       	mul	r27, r19
+ dfa:	c0 01       	movw	r24, r0
+ dfc:	a3 9f       	mul	r26, r19
+ dfe:	70 0d       	add	r23, r0
+ e00:	81 1d       	adc	r24, r1
+ e02:	11 24       	eor	r1, r1
+ e04:	91 1d       	adc	r25, r1
+ e06:	b2 9f       	mul	r27, r18
+ e08:	70 0d       	add	r23, r0
+ e0a:	81 1d       	adc	r24, r1
+ e0c:	11 24       	eor	r1, r1
+ e0e:	91 1d       	adc	r25, r1
+ e10:	08 95       	ret
+
+00000e12 <__itoa_ncheck>:
+ e12:	bb 27       	eor	r27, r27
+ e14:	4a 30       	cpi	r20, 0x0A	; 10
+ e16:	31 f4       	brne	.+12     	; 0xe24 <__itoa_ncheck+0x12>
+ e18:	99 23       	and	r25, r25
+ e1a:	22 f4       	brpl	.+8      	; 0xe24 <__itoa_ncheck+0x12>
+ e1c:	bd e2       	ldi	r27, 0x2D	; 45
+ e1e:	90 95       	com	r25
+ e20:	81 95       	neg	r24
+ e22:	9f 4f       	sbci	r25, 0xFF	; 255
+ e24:	0c 94 15 07 	jmp	0xe2a	; 0xe2a <__utoa_common>
+
+00000e28 <__utoa_ncheck>:
+ e28:	bb 27       	eor	r27, r27
+
+00000e2a <__utoa_common>:
+ e2a:	fb 01       	movw	r30, r22
+ e2c:	55 27       	eor	r21, r21
+ e2e:	aa 27       	eor	r26, r26
+ e30:	88 0f       	add	r24, r24
+ e32:	99 1f       	adc	r25, r25
+ e34:	aa 1f       	adc	r26, r26
+ e36:	a4 17       	cp	r26, r20
+ e38:	10 f0       	brcs	.+4      	; 0xe3e <__utoa_common+0x14>
+ e3a:	a4 1b       	sub	r26, r20
+ e3c:	83 95       	inc	r24
+ e3e:	50 51       	subi	r21, 0x10	; 16
+ e40:	b9 f7       	brne	.-18     	; 0xe30 <__utoa_common+0x6>
+ e42:	a0 5d       	subi	r26, 0xD0	; 208
+ e44:	aa 33       	cpi	r26, 0x3A	; 58
+ e46:	08 f0       	brcs	.+2      	; 0xe4a <__utoa_common+0x20>
+ e48:	a9 5d       	subi	r26, 0xD9	; 217
+ e4a:	a1 93       	st	Z+, r26
+ e4c:	00 97       	sbiw	r24, 0x00	; 0
+ e4e:	79 f7       	brne	.-34     	; 0xe2e <__utoa_common+0x4>
+ e50:	b1 11       	cpse	r27, r1
+ e52:	b1 93       	st	Z+, r27
+ e54:	11 92       	st	Z+, r1
+ e56:	cb 01       	movw	r24, r22
+ e58:	0c 94 2e 07 	jmp	0xe5c	; 0xe5c <strrev>
+
+00000e5c <strrev>:
+ e5c:	dc 01       	movw	r26, r24
+ e5e:	fc 01       	movw	r30, r24
+ e60:	67 2f       	mov	r22, r23
+ e62:	71 91       	ld	r23, Z+
+ e64:	77 23       	and	r23, r23
+ e66:	e1 f7       	brne	.-8      	; 0xe60 <strrev+0x4>
+ e68:	32 97       	sbiw	r30, 0x02	; 2
+ e6a:	04 c0       	rjmp	.+8      	; 0xe74 <strrev+0x18>
+ e6c:	7c 91       	ld	r23, X
+ e6e:	6d 93       	st	X+, r22
+ e70:	70 83       	st	Z, r23
+ e72:	62 91       	ld	r22, -Z
+ e74:	ae 17       	cp	r26, r30
+ e76:	bf 07       	cpc	r27, r31
+ e78:	c8 f3       	brcs	.-14     	; 0xe6c <strrev+0x10>
+ e7a:	08 95       	ret
+
+00000e7c <eeprom_read_byte>:
+ e7c:	e1 99       	sbic	0x1c, 1	; 28
+ e7e:	fe cf       	rjmp	.-4      	; 0xe7c <eeprom_read_byte>
+ e80:	9f bb       	out	0x1f, r25	; 31
+ e82:	8e bb       	out	0x1e, r24	; 30
+ e84:	e0 9a       	sbi	0x1c, 0	; 28
+ e86:	99 27       	eor	r25, r25
+ e88:	8d b3       	in	r24, 0x1d	; 29
+ e8a:	08 95       	ret
+
+00000e8c <eeprom_read_word>:
+ e8c:	a8 e1       	ldi	r26, 0x18	; 24
+ e8e:	b0 e0       	ldi	r27, 0x00	; 0
+ e90:	42 e0       	ldi	r20, 0x02	; 2
+ e92:	50 e0       	ldi	r21, 0x00	; 0
+ e94:	0c 94 60 07 	jmp	0xec0	; 0xec0 <eeprom_read_blraw>
+
+00000e98 <eeprom_write_byte>:
+ e98:	26 2f       	mov	r18, r22
+
+00000e9a <eeprom_write_r18>:
+ e9a:	e1 99       	sbic	0x1c, 1	; 28
+ e9c:	fe cf       	rjmp	.-4      	; 0xe9a <eeprom_write_r18>
+ e9e:	9f bb       	out	0x1f, r25	; 31
+ ea0:	8e bb       	out	0x1e, r24	; 30
+ ea2:	2d bb       	out	0x1d, r18	; 29
+ ea4:	0f b6       	in	r0, 0x3f	; 63
+ ea6:	f8 94       	cli
+ ea8:	e2 9a       	sbi	0x1c, 2	; 28
+ eaa:	e1 9a       	sbi	0x1c, 1	; 28
+ eac:	0f be       	out	0x3f, r0	; 63
+ eae:	01 96       	adiw	r24, 0x01	; 1
+ eb0:	08 95       	ret
+
+00000eb2 <eeprom_write_word>:
+ eb2:	0e 94 4c 07 	call	0xe98	; 0xe98 <eeprom_write_byte>
+ eb6:	27 2f       	mov	r18, r23
+ eb8:	0c 94 4d 07 	jmp	0xe9a	; 0xe9a <eeprom_write_r18>
+
+00000ebc <eeprom_read_block>:
+ ebc:	dc 01       	movw	r26, r24
+ ebe:	cb 01       	movw	r24, r22
+
+00000ec0 <eeprom_read_blraw>:
+ ec0:	fc 01       	movw	r30, r24
+ ec2:	e1 99       	sbic	0x1c, 1	; 28
+ ec4:	fe cf       	rjmp	.-4      	; 0xec2 <eeprom_read_blraw+0x2>
+ ec6:	06 c0       	rjmp	.+12     	; 0xed4 <eeprom_read_blraw+0x14>
+ ec8:	ff bb       	out	0x1f, r31	; 31
+ eca:	ee bb       	out	0x1e, r30	; 30
+ ecc:	e0 9a       	sbi	0x1c, 0	; 28
+ ece:	31 96       	adiw	r30, 0x01	; 1
+ ed0:	0d b2       	in	r0, 0x1d	; 29
+ ed2:	0d 92       	st	X+, r0
+ ed4:	41 50       	subi	r20, 0x01	; 1
+ ed6:	50 40       	sbci	r21, 0x00	; 0
+ ed8:	b8 f7       	brcc	.-18     	; 0xec8 <eeprom_read_blraw+0x8>
+ eda:	08 95       	ret
+
+00000edc <_exit>:
+ edc:	f8 94       	cli
+
+00000ede <__stop_program>:
+ ede:	ff cf       	rjmp	.-2      	; 0xede <__stop_program>
